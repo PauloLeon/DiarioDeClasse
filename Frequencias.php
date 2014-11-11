@@ -1,43 +1,13 @@
-<?php
-//Caio script
-	
-	//iniciando sessao do usuario
-	session_start();
-	//chamando arquivo do projeto
-	require_once('objetos/User.php');
-	//evitando warnings
-	error_reporting(0);
-	
-	//parte do codigo que verifica se deve deslogar da sessao
-	$redirecionar = "../index1.php";
-	if((!isset ($_SESSION['userLogado']) == true))
-	{
-		debug_to_console("deslogou do sistema - ARQUIVO:Frequencia.php");
-		unset($_SESSION['userLogado']);
-		header('location:'.$redirecionar);
-	}
-	$userLogado = $_SESSION['userLogado'];
-	/////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//metodo para debug 
-	function debug_to_console( $data ) 
-	{
-		if ( is_array( $data ) )
-			$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-		else
-			$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-	
-		echo $output;
-	}
-?>	
-
-
 <!DOCTYPE html>
 <html>
   
-  <head>
+  <head></head>
+  
+  <body>console.log( 'Debug Objects: " . implode( ',', $data) . "' );"; else $output="
+    <script>
+      console.log( 'Debug Objects: "
+      . $data . "' );
+    </script>"; echo $output; } ?&gt;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,9 +31,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  
-  <body>
     <div id="wrapper">
       <!-- Navigation -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -268,158 +235,157 @@
           </div>
           <a class="btn btn-primary" data-toggle="modal" data-target="#kk" draggable="true">Escolha
           </a>
-          <div <p=""></div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Faltas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Caio Borsoi</td>
-                <td>
-                  <select size="1">
-                    <option value="zero">0</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>
-                  <div></div>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Paulo Rosa</td>
-                <td>
-                  <select size="1">
-                    <option value="zero">0</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>
-                  <div></div>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Julio Rodrigues</td>
-                <td>
-                  <select size="1">
-                    <option value="zero">0</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>
-                  <div></div>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>João Sabão</td>
-                <td>
-                  <select size="1">
-                    <option value="zero">0</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>
-                  <div></div>
-                </td>
-              </tr>
-              <tr draggable="true">
-                <td>5</td>
-                <td>Zé Silva</td>
-                <td>
-                  <select size="1">
-                    <option value="zero">0</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>
-                  <div></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <a class="btn btn-primary" style="float: right;">Salvar</a>
-          <!-- Page Heading -->
-          <div class="modal fade" id="kk" draggable="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h4 class="modal-title">Escolha</h4>
+          <div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Developers</h3>
+                <div class="pull-right">
+                  <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                  data-container="body">
+                    <i class="glyphicon glyphicon-filter"></i>
+                  </span>
                 </div>
-                <div class="modal-body" draggable="true">
-                  <p>Escola:</p>
-                  <select class="form-control">
-                    <option value="one">Impacto</option>
-                    <option value="two">Nazare</option>
-                    <option value="three">Universo</option>
-                    <option value="four">Moderno</option>
-                  </select>
-                  <div>
-                    <p></p>
+              </div>
+              <div class="panel-body">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                data-filters="#dev-table" placeholder="Filter Developers">
+              </div>
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Turma</th>
+                    <th>Escola</th>
+                    <th>Falta(s)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Caio</td>
+                    <td>307</td>
+                    <td>Nazare</td>
+                    <td>
+                      <select size="1">
+                        <option value="zero">0</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                      </select>
+                      <div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Caizim</td>
+                    <td>203</td>
+                    <td>Impacto</td>
+                    <td>
+                      <select size="1">
+                        <option value="zero">0</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                      </select>
+                      <div></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Caiu</td>
+                    <td>1001</td>
+                    <td>Moderno</td>
+                    <td>
+                      <select size="1">
+                        <option value="zero">0</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                      </select>
+                      <div></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div <p=""></div>
+            <a class="btn btn-primary" style="float: right;">Salvar</a>
+            <!-- Page Heading -->
+            <div class="modal fade" id="kk">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Escolha</h4>
                   </div>
-                  <p>Turma:</p>
-                  <select class="form-control">
-                    <option value="one">307</option>
-                    <option value="two">301</option>
-                    <option value="three">302</option>
-                  </select>
-                  <div>
-                    <p></p>
+                  <div class="modal-body" draggable="true">
+                    <p>Escola:</p>
+                    <select class="form-control">
+                      <option value="one">Impacto</option>
+                      <option value="two">Nazare</option>
+                      <option value="three">Universo</option>
+                      <option value="four">Moderno</option>
+                    </select>
+                    <div>
+                      <p></p>
+                    </div>
+                    <p>Turma:</p>
+                    <select class="form-control">
+                      <option value="one">307</option>
+                      <option value="two">301</option>
+                      <option value="three">302</option>
+                    </select>
+                    <div>
+                      <p></p>
+                    </div>
+                    <p>Disciplina:</p>
+                    <select class="form-control">
+                      <option value="one">Matematica</option>
+                      <option value="two">Física</option>
+                    </select>
                   </div>
-                  <p>Disciplina:</p>
-                  <select class="form-control">
-                    <option value="one">Matematica</option>
-                    <option value="two">Física</option>
-                  </select>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-default" data-dismiss="modal" draggable="true">Fechar</a>
-                  <a class="btn btn-primary">Visualizar</a>
+                  <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal" draggable="true">Fechar</a>
+                    <a class="btn btn-primary">Visualizar</a>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- /.row -->
+            <!-- Flot Charts -->
+            <!-- /.row -->
+            <!-- /.row -->
+            <!-- /.row -->
+            <!-- /.row -->
+            <!-- Morris Charts -->
+            <!-- /.row -->
+            <!-- /.row -->
+            <!-- /.row -->
           </div>
-          <!-- /.row -->
-          <!-- Flot Charts -->
-          <!-- /.row -->
-          <!-- /.row -->
-          <!-- /.row -->
-          <!-- /.row -->
-          <!-- Morris Charts -->
-          <!-- /.row -->
-          <!-- /.row -->
-          <!-- /.row -->
+          <!-- /.container-fluid -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /#page-wrapper -->
       </div>
-      <!-- /#page-wrapper -->
+      <script src="js/jquery-1.11.0.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/plugins/morris/raphael.min.js"></script>
+      <script src="js/plugins/morris/morris.min.js"></script>
+      <script src="js/plugins/morris/morris-data.js"></script>
+      <script src="js/plugins/flot/jquery.flot.js"></script>
+      <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+      <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+      <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+      <script src="js/plugins/flot/flot-data.js"></script>
+      <!-- /#wrapper -->
+      <!-- jQuery Version 1.11.0 -->
+      <!-- Bootstrap Core JavaScript -->
+      <!-- Morris Charts JavaScript -->
+      <!-- Flot Charts JavaScript -->
+      <!--[if lte IE 8]>
+        <script src="js/excanvas.min.js"></script>
+      <![endif]-->
     </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
-    <script src="js/plugins/flot/jquery.flot.js"></script>
-    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="js/plugins/flot/flot-data.js"></script>
-    <!-- /#wrapper -->
-    <!-- jQuery Version 1.11.0 -->
-    <!-- Bootstrap Core JavaScript -->
-    <!-- Morris Charts JavaScript -->
-    <!-- Flot Charts JavaScript -->
-    <!--[if lte IE 8]>
-      <script src="js/excanvas.min.js"></script>
-    <![endif]-->
   </body>
 
 </html>
