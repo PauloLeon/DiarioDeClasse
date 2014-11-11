@@ -187,30 +187,30 @@
               <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Cadastrar <i class="fa fa-fw fa-caret-down"></i></a>
               <ul id="demo" class="collapse">
                 <li>
-                  <a href="Cadastrar.html">Escola</a>
+                  <a href="Cadastrar.php">Escola</a>
                 </li>
                 <li>
-                  <a href="CadastrarDisciplina.html">Disciplina</a>
+                  <a href="CadastrarDisciplina.php">Disciplina</a>
                 </li>
                 <li>
-                  <a href="CadastroTurma.html">Turma</a>
+                  <a href="CadastroTurma.php">Turma</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="Frequencias.html"><i class="fa fa-fw fa-bar-chart-o"></i> Frequências</a>
+              <a href="Frequencias.php"><i class="fa fa-fw fa-bar-chart-o"></i> Frequências</a>
             </li>
             <li>
-              <a href="RegistroDeConteudo.html"><i class="fa fa-fw fa-table"></i> Registros de Conteúdos</a>
+              <a href="RegistroDeConteudo.php"><i class="fa fa-fw fa-table"></i> Registros de Conteúdos</a>
             </li>
             <li>
-              <a href="Notas.html"><i class="fa fa-fw fa-edit"></i> Notas</a>
+              <a href="Notas.php"><i class="fa fa-fw fa-edit"></i> Notas</a>
             </li>
             <li>
-              <a href="RelatoriosDeConceitos.html"><i class="fa fa-fw fa-file"></i> Relatórios de Conceitos</a>
+              <a href="RelatoriosDeConceitos.php"><i class="fa fa-fw fa-file"></i> Relatórios de Conceitos</a>
             </li>
             <li class="active">
-              <a href="Ocorrencias.html"><i class="fa fa-fw fa-file"></i> Ocorrências</a>
+              <a href="Ocorrencias.php"><i class="fa fa-fw fa-file"></i> Ocorrências</a>
             </li>
           </ul>
         </div>
@@ -225,7 +225,7 @@
               <ol class="breadcrumb">
                 <li>
                   <i class="fa fa-dashboard"></i>
-                  <a href="index.html">Dashboard</a>
+                  <a href="index.php">Dashboard</a>
                 </li>
                 <li class="active">
                   <i class="fa fa-file">&nbsp;Ocorrências</i>
