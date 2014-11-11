@@ -372,7 +372,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="Frequencias.html">
+                <a href="Frequencias.php">
 
 
 
@@ -413,7 +413,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="Notas.html">
+                <a href="Notas.php">
 
 
 
@@ -453,7 +453,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="#">
+                <a href="RegistroDeConteudo.php">
 
 
 
@@ -494,7 +494,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="#">
+                  <a href="RelatoriosDeConceitos.php">
 
 
 
@@ -536,7 +536,7 @@
                         </div>
                       </div>
                     </div>
-                    <a href="Frequencias.html">
+                    <a href="Ocorrencias.php">
 
 
 
@@ -578,7 +578,7 @@
                           </div>
                         </div>
                       </div>
-                      <a href="Frequencias.html">
+                      <a href="#">
 
 
 
@@ -621,7 +621,7 @@
                               </div>
                             </div>
                           </div>
-                          <a href="Frequencias.html">
+                          <a href="#">
 
 
 
@@ -663,7 +663,7 @@
                                 </div>
                               </div>
                             </div>
-                            <a href="Frequencias.html">
+                            <a href="Ocorrencias.php">
 
 
 
