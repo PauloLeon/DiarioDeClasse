@@ -4,6 +4,7 @@ class conexao {
 
    //***Comentario: Paulo Rosa*** Atualizado para o diario de classe
     var $user = "root";
+	//var  $passwd = "root";
     var $passwd = "";
     //var $host = "localhost:8889";
 	var $host = "localhost";
