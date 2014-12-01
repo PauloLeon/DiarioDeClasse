@@ -92,6 +92,7 @@ require_once('model/conexao.php');
 				{
 					debug_to_console($sql. "- ARQUIVO:User.php");
 				}
+				echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=../Cadastrar.php">';
 			} catch (Exception $exc) {
        		    die($exc->getTraceAsString());
     		} 
@@ -131,6 +132,24 @@ require_once('model/conexao.php');
 			}
 		}
 		
+		//ainda não feito
+		public function getTurmaJSON($idusuario)
+		{
+			try{
+				$sql ="SELECT nome,turno,numero_de_alunos,fk_idEscola FROM turma".
+				" WHERE usuario_idUsuario = ".$idusuario.
+				" ORDER BY nome ASC;";
+				debug_to_console($sql. "- ARQUIVO:User.php");
+				
+				$result=$this->connDataBase->queryArrayEscolas($sql);
+				debug_to_console(json_encode($result). "- ARQUIVO:User.php");
+				$json = json_encode($result);
+				return $json;
+			
+			}catch(Exception $exc){
+				die($exc->getTraceAsString());
+			}
+		}
 		
 		
 		

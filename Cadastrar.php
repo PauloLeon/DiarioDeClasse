@@ -28,7 +28,7 @@
 	debug_to_console("entrou no geral - ARQUIVO:Cadastrar.php");
 	debug_to_console($userLogado->isConnect()." - ARQUIVO:Cadastrar.php");
 	debug_to_console($userLogado->isLink()." - ARQUIVO:Cadastrar.php");
-	$userLogado->getEscolasJSON($userLogado->getId());
+	$jsonEscolas=$userLogado->getEscolasJSON($userLogado->getId());
 
 	//nao consigo chamar isso
 	 if (!empty($_GET['formSubmit'])) {
@@ -36,15 +36,8 @@
     	 $varCidade = $_GET['inputCidade'];
 		 debug_to_console("entrou aqui- ARQUIVO:Cadastrar.php");
 		 debug_to_console($varNome . "- ARQUIVO:Cadastrar.php");
-		 //$oConexao=$userLogado->getConexao();
-		 /*$sql = "SELECT * FROM usuario";
-		 $result = $oConexao->query($sql);
-		 if($result==false)
-		 {
-			 debug_to_console("vixe");
-		 }*/
-  		  $userLogado->insertEscolaBanco($varNome,$varCidade,$userLogado->getId());
-		  debug_to_console("passou aqui". "- ARQUIVO:Cadastrar.php");
+  		 $userLogado->insertEscolaBanco($varNome,$varCidade,$userLogado->getId());
+		 debug_to_console("passou aqui". "- ARQUIVO:Cadastrar.php");
  	 } else {
 	 }
 	
@@ -201,24 +194,39 @@
       <div>
         <p></p>
       </div>
-      <form role="form" action="Cadastrar.php" method="get"  ng-submit="addEscola()">
+      <form role="form" action="Cadastrar.php" method="get">
         <div class="form-group">
           <label class="control-label" for="exampleInputEmail1">Nome</label>
           <input class="form-control" id="exampleInputEmail1" placeholder="Nome da Escola"
-              style="width: 350px;" type="text" name="inputNome" value="<?=$varNome;?>"  ng-model="_nome" >
+              style="width: 350px;" type="text" name="inputNome" value="<?=$varNome;?>">
         </div>
         <div class="form-group">
           <label class="control-label" for="exampleInputEmail1">Cidade</label>
           <input class="form-control" id="exampleInputEmail1" placeholder="Cidade da Escola"
-              style="width: 350px;" type="text" name="inputCidade"	value="<?=$varCidade;?>" ng-model="_cidade" >
+              style="width: 350px;" type="text" name="inputCidade"	value="<?=$varCidade;?>">
         </div>
         <button type="submit" class="btn btn-primary" name="formSubmit" value="submit_insert">Cadastrar</button>
         <p></p>
       </form>
       <ul class="list-group" style="width: 350px;">
         <label class="list-grupro-label" for="listGrupoLabel">Escolas Cadastradas</label>
-         <!-- diretiva ng-repeat -->
-      	<li class="list-group-item" ng-repeat="escola in escolas">{{escola.name}} - {{escola.cidade}}</li>
+        <?php
+			$jsonEscolas = json_decode($jsonEscolas);
+			//debug_to_console($jsonEscolas);
+			if(empty($jsonEscolas))
+			{
+				echo"<li class=\"list-group-item\">"."Você ainda não tem escolas cadastradas."."</li>";
+			}
+			
+			foreach($jsonEscolas as $val)
+			{
+				
+			echo"<li class=\"list-group-item\">".$val->nome."-".$val->cidade."</li>";				
+			}
+		?>
+         <!-- diretiva ng-repeat
+      	<li class="list-group-item" ng-repeat="escola in escolas">{{escola.name}} - {{escola.cidade}}</li>  -->
+     <!--   <li class="list-group-item" > IMpacto</li>-->
       </ul>
     </div>
   </div>

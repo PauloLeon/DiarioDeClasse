@@ -17,5 +17,10 @@ mvcCadastrar.controller('CadastrarController', function CadastrarController($sco
 	};
 	
 	
+	$scope.addEscolasBanco = function(bancoEscolas){
+		$scope.escolas = bancoEscolas;	
+	}
+	
+	
 	
 });
