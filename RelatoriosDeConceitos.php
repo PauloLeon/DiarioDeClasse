@@ -1,42 +1,11 @@
 <?php
-//Caio script
-	
-	//iniciando sessao do usuario
-	session_start();
-	//chamando arquivo do projeto
-	require_once('objetos/User.php');
-	//evitando warnings
-	error_reporting(0);
-	
-	//parte do codigo que verifica se deve deslogar da sessao
-	$redirecionar = "../index1.php";
-	if((!isset ($_SESSION['userLogado']) == true))
-	{
-		debug_to_console("deslogou do sistema - ARQUIVO:RelatoriosDeConceitos.php");
-		unset($_SESSION['userLogado']);
-		header('location:'.$redirecionar);
-	}
-	$userLogado = $_SESSION['userLogado'];
-	/////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//metodo para debug 
-	function debug_to_console( $data ) 
-	{
-		if ( is_array( $data ) )
-			$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-		else
-			$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-	
-		echo $output;
-	}
-?>	
+	include 'php/session.php';
+?>
 
 
 <!DOCTYPE html>
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,16 +20,8 @@
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-    queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file://
-    -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  
+
   <body>
     <div id="wrapper">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
@@ -73,141 +34,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Diário de Classe</a>
+          <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu message-dropdown">
-              <li class="message-preview">
-                <a href="#">
 
-                                <div class="media">
-
-                                    <span class="pull-left">
-
-                                        <img class="media-object" src="../../imagens site diario de classse/novo.png" alt="">
-
-                                    </span>
-
-                                    <div class="media-body">
-
-                                        <h5 class="media-heading"><strong>Eduardo Saraiva</strong>
-
-                                        </h5>
-
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Ontem as 8:32</p>
-
-                                        <p>Chamada realizada pelo aparelho com sucesso!</p>
-
-                                    </div>
-
-                                </div>
-
-                            </a>
-              </li>
-              <li class="message-preview">
-                <a href="#">
-
-                                <div class="media">
-
-                                    <span class="pull-left">
-
-                                        <img class="media-object" src="../../imagens site diario de classse/lido.png" alt="">
-
-                                    </span>
-
-                                    <div class="media-body">
-
-                                        <h5 class="media-heading"><strong>Eduardo Saraiva</strong>
-
-                                        </h5>
-
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Anteontem as 19:52</p>
-
-                                        <p>Bem-vindo ao seu Diário de classe siga as instrucões na Sala do Professor</p>
-
-                                    </div>
-
-                                </div>
-
-                            </a>
-              </li>
-              <li class="message-preview">
-                <a href="#">
-
-                                <div class="media">
-
-                                    <span class="pull-left">
-
-                                        <img class="media-object" src="../../imagens site diario de classse/lido.png" alt="">
-
-                                    </span>
-
-                                    <div class="media-body">
-
-                                        <h5 class="media-heading"><strong>Eduardo Saraiva</strong>
-
-                                        </h5>
-
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Anteontem as 19:54</p>
-
-                                        <p>Conta free ativada!</p>
-
-                                    </div>
-
-                                </div>
-
-                            </a>
-              </li>
-              <li class="message-footer">
-                <a href="#">Ler novas menssagens</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu alert-dropdown">
-              <li>
-                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-              </li>
-              <li>
-                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-              </li>
-              <li>
-                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-              </li>
-              <li>
-                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-              </li>
-              <li>
-                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-              </li>
-              <li>
-                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">View All</a>
-              </li>
-            </ul>
-          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
-                <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                <a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-fw fa-envelope"></i> Caixa de Menssagens</a>
+                <a href="#" style="color: #428bca;"><i class="fa fa-fw fa-envelope"></i> Caixa de Menssagens</a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-fw fa-gear"></i> Configuração de Conta</a>
+                <a href="#" style="color: #428bca;"><i class="fa fa-fw fa-gear"></i> Configuração de Conta</a>
               </li>
               <li class="divider"></li>
               <li>
-                <a href="action_logout.php"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                <a href="action_logout.php"style="color: #c94141;"><i class="fa fa-fw fa-power-off"></i> Sair</a>
               </li>
             </ul>
           </li>
@@ -215,15 +61,15 @@
         <!-- Sidebar Menu Items - These collapse to the responsive navigation
         menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav">
+          <ul class="div_blue nav navbar-nav side-nav">
             <li>
-              <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Sala do Professor</a>
+              <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
             </li>
-            <li>
-              <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Cadastrar <i class="fa fa-fw fa-caret-down"></i></a>
-              <ul id="demo" class="collapse">
+          <li>
+                  <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
+                </li>
                 <li>
-                  <a href="Cadastrar.php">Escola</a>
+                  <a href="Cadastrar.php">Instituição/Escola</a>
                 </li>
                 <li>
                   <a href="CadastrarDisciplina.php">Disciplina</a>
@@ -231,9 +77,10 @@
                 <li>
                   <a href="CadastroTurma.php">Turma</a>
                 </li>
-              </ul>
-            </li>
-            <li>
+                <li>
+                  <a href="CadastrarAluno.php">Aluno</a>
+                </li>
+          <!--  <li>
               <a href="Frequencias.php"><i class="fa fa-fw fa-bar-chart-o"></i> Frequências</a>
             </li>
             <li>
@@ -243,11 +90,11 @@
               <a href="Notas.php"><i class="fa fa-fw fa-edit"></i> Notas</a>
             </li>
             <li class="active" draggable="true">
-              <a href="RegistroDeConteudo.php"><i class="fa fa-fw fa-file"></i> Relatórios de Conceitos</a>
+              <a href="RelatoriosDeConceitos.php"><i class="fa fa-fw fa-file"></i> Relatórios de Conceitos</a>
             </li>
             <li>
               <a href="Ocorrencias.php"><i class="fa fa-fw fa-file"></i> Ocorrências</a>
-            </li>
+            </li>-->
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -259,7 +106,7 @@
           <div class="row">
             <div class="col-lg-12">
               <h1 class="page-header">Relatórios de Conceitos</h1>
-              <ol class="breadcrumb">
+              <!--<ol class="breadcrumb">
                 <li>
                   <i class="fa fa-dashboard"></i>
                   <a href="index.php">Dashboard</a>
@@ -267,10 +114,10 @@
                 <li class="active">
                   <i class="fa fa-desktop">&nbsp;Relatórios de Conceitos</i>
                 </li>
-              </ol>
+              </ol>-->
             </div>
           </div>
-          <a class="btn btn-primary" data-toggle="modal" data-target="#imp">Clique para imprimir algum relatório</a>
+          <a class="btn btn-julio" data-toggle="modal" data-target="#imp">Clique para imprimir algum relatório</a>
           <div class="modal fade" id="imp">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -316,7 +163,7 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary" data-toggle="modal" data-target="#kkk">Clique para fazer o relatório</a>
+          <a class="btn btn-julio" data-toggle="modal" data-target="#kkk">Clique para fazer o relatório</a>
           <div class="modal fade" id="kkk">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -393,9 +240,6 @@
             </tbody>
           </table>
           <h1>Relatório</h1>
-          <!-- /.row -->
-          <!-- Main jumbotron for a primary marketing message or call to action
-          -->
         </div>
         <form role="form">
           <div class="form-group">
@@ -403,7 +247,7 @@
             <textarea class="form-control" rows="10" style="width: 700px;"></textarea>
           </div>
         </form>
-        <a class="btn btn-primary">Salvar</a>
+        <a class="btn btn-julio">Salvar</a>
         <!-- /.container-fluid -->
       </div>
       <!-- /#page-wrapper -->

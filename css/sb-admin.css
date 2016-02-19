@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: #3c8fd0 ;
 }
 
 @media(min-width:768px) {
@@ -57,7 +57,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #428bca;
 }
 
 .top-nav>li>a:hover,
@@ -65,8 +65,8 @@ body {
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-    color: #fff;
-    background-color: #000;
+    /*color: #fff;*/
+    background-color: 0 0;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -132,7 +132,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: #204d70 !important;
     }
 }
 

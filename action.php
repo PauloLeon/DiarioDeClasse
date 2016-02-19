@@ -1,6 +1,6 @@
 <?php
 //arquivo de usuario
-require_once('objetos/User.php');
+require_once('php/User.php');
 require_once('model/conexao.php');
 $oConexao = new conexao();
 
@@ -46,23 +46,23 @@ if($_POST['formSubmit'] == "Submit")
 				//retornando todos os usuarios
 				$sqlBusca = "select * from Usuario;";
 				$array = $oConexao->findInDatabase($sqlBusca);
-				print_r(array_values($array)); 
+				//print_r(array_values($array)); 
 				for ($i = 0; $i <= sizeof($array); $i++) 
 				{
-					echo $array[0];	
+					//echo $array[0];	
 					$nome = array_column($a, 'nome');
 				}
 				//se tudo der certo
 				if($result)
 				{
-					echo "Conta Efetuada com Sucesso!,\nEstamos lhe redirecionando em 5 segundos...";
+					//echo "Conta Efetuada com Sucesso!,\nEstamos lhe redirecionando em 5 segundos...";
 					//retorno do nome e do id do usuario para guardar na sessao
 					$sql = "select nome, idUsuario from usuario where email like ".PrepSQL($varEmail)." and senha like ".PrepSQL($varSenha).";";
 					$result = $oConexao->query($sql);
 					$row = mysql_fetch_array($result);
 					 $_SESSION['userLogado'] =  new User($varEmail,$varNome,$row['idUsuario']);
 					//mudar o tempo depois!
-					echo '<meta HTTP-EQUIV="Refresh" CONTENT="5; URL=../index.php">';			
+				   echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=../index.php">';			
 				}
 				
   				} catch (Exception $exc) {
@@ -82,7 +82,7 @@ function debug_to_console( $data ) {
     else
         $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 
-    echo $output;
+   // echo $output;
 }
 
 //metodo que prepara o sql

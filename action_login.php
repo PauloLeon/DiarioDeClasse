@@ -7,13 +7,13 @@ function debug_to_console( $data )
     else
         $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 
-    echo $output;
+  //  echo $output;
 }
 
 
 error_reporting(0); 
 //arquivo de usuario
-require_once('objetos/User.php');
+require_once('php/User.php');
 require_once('model/conexao.php');
 $oConexao = new conexao();
 
@@ -68,9 +68,9 @@ if($_POST['formSubmit'] == "Submit")
 					debug_to_console($_SESSION['userLogado']->isConnect() . " ARQUIVO:actionLogin");
 					if($_SESSION['userLogado']=="")debug_to_console("Sessao não iniciada direito - 
 					ARQUIVO:actionLogin");
-					echo "Login Efetuado com Sucesso!,\nEstamos lhe redirecionando em 5 segundos...";
+					//echo "Login Efetuado com Sucesso!,\nEstamos lhe redirecionando em 5 segundos...";
 					//para redirecionar com um tempo de 5segundos de delay
-					echo '<meta HTTP-EQUIV="Refresh" CONTENT="5; URL=../index.php">';
+					echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=../index.php">';
 				   
 				}
 		   } catch (Exception $exc) {

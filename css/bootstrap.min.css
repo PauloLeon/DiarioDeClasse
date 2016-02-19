@@ -2445,30 +2445,55 @@ textarea.input-lg, select[multiple].input-lg {
 }
 .btn-primary {
 	color: #fff;
-	background-color: #FF7F00;
-	border-color: #FF9966
+	background-color: #337ab7;
+	border-color: #2e6da4
 }
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: #FF9900;
-	border-color: #FF9933
-}
- .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-	color: #fff;
-	background-color: #3071a9;
-	border-color: #285e8e
+	background-color: #286090;
+	border-color: #204d74
 }
 .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
 	background-image: none
 }
-.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+	background-color: #337ab7;
+	border-color: #2e6da4
+}
+.btn-primary .badge {
+	color: #337ab7;
+	background-color: #fff
+}
+
+/*New Paulo Rosa*/
+.btn-julio {
+	color: #fff;
+	background-color: #FF7F00;
+	border-color: #FF9966
+}
+.btn-julio:hover{
+	color: #fff;
+	background-color: #FF9900;
+	border-color: #FF9933
+}
+ .btn-julio:focus, .btn-julio:active, .btn-julio.active, .open>.dropdown-toggle.btn-julio {
+	color: #fff;
+	background-color: #3071a9;
+	border-color: #285e8e
+}
+.btn-julio:active, .btn-julio.active, .open>.dropdown-toggle.btn-julio {
+	background-image: none
+}
+.btn-julio.disabled, .btn-julio[disabled], fieldset[disabled] .btn-julio, .btn-julio.disabled:hover, .btn-julio[disabled]:hover, fieldset[disabled] .btn-julio:hover, .btn-julio.disabled:focus, .btn-julio[disabled]:focus, fieldset[disabled] .btn-julio:focus, .btn-julio.disabled:active, .btn-julio[disabled]:active, fieldset[disabled] .btn-julio:active, .btn-julio.disabled.active, .btn-julio[disabled].active, fieldset[disabled] .btn-julio.active {
 	background-color: #428bca;
 	border-color: #357ebd
 }
-.btn-primary .badge {
+.btn-julio .badge {
 	color: #428bca;
 	background-color: #fff
 }
+
+/*END*/
 .btn-success {
 	color: #fff;
 	background-color: #5cb85c;
@@ -2551,6 +2576,28 @@ textarea.input-lg, select[multiple].input-lg {
 }
 .btn-danger .badge {
 	color: #d9534f;
+	background-color: #fff
+}
+
+.btn-purple {
+	color: #fff;
+	background-color: #8369B0;
+	border-color: #8369B0
+}
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active, .open>.dropdown-toggle.btn-purple {
+	color: #fff;
+	background-color: #8369B0;
+	border-color: #8369B0
+}
+.btn-purple:active, .btn-purple.active, .open>.dropdown-toggle.btn-purple {
+	background-image: none
+}
+.btn-purple.disabled, .btn-purple[disabled], fieldset[disabled] .btn-purple, .btn-purple.disabled:hover, .btn-purple[disabled]:hover, fieldset[disabled] .btn-danger:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus, .btn-danger.disabled:active, .btn-danger[disabled]:active, fieldset[disabled] .btn-danger:active, .btn-danger.disabled.active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger.active {
+	background-color: #8369B0;
+	border-color: #8369B0
+}
+.btn-purple .badge {
+	color: #8369B0;
 	background-color: #fff
 }
 .btn-link {
@@ -3079,6 +3126,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .nav-tabs>li>a:hover {
 	border-color: #eee #eee #ddd
 }
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 	color: #555;
 	cursor: default;
@@ -3581,8 +3629,8 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	color: #ccc
 }
 .navbar-inverse {
-	background-color: #222;
-	border-color: #080808
+	background-color: #fff;
+	border-color: #3C90D2
 }
 .navbar-inverse .navbar-brand {
 	color: #fff
@@ -3595,7 +3643,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	color: #777
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #777
+	color: #fff
 }
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
 	color: #fff;
@@ -3603,20 +3651,20 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
 	color: #fff;
-	background-color: #080808
+	background-color: #204d70
 }
 .navbar-inverse .navbar-nav>.disabled>a, .navbar-inverse .navbar-nav>.disabled>a:hover, .navbar-inverse .navbar-nav>.disabled>a:focus {
 	color: #444;
 	background-color: transparent
 }
 .navbar-inverse .navbar-toggle {
-	border-color: #333
+	border-color: #3C90D2
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	background-color: #333
+	background-color: #204d70
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-	background-color: #fff
+	background-color: #3C90D2
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 	border-color: #101010
@@ -3806,6 +3854,10 @@ a.label:hover, a.label:focus {
 .btn .label {
 	position: relative;
 	top: -1px
+}
+.label-paulo {
+	background-color: #fff;
+	font-size: 100%
 }
 .label-default {
 	background-color: #777
@@ -4141,10 +4193,12 @@ to {
 	list-style: none
 }
 .list-group {
+	cursor: pointer;
 	padding-left: 0;
 	margin-bottom: 20px
 }
 .list-group-item {
+	cursor: pointer;
 	position: relative;
 	display: block;
 	padding: 10px 15px;
@@ -4449,6 +4503,47 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-primary>.panel-footer+.panel-collapse>.panel-body {
 	border-bottom-color: #428bca
 }
+
+/*New Paulo*/
+.panel-gray {
+	border-color: #696969
+}
+.panel-gray>.panel-heading {
+	color: #fff;
+	background-color: #696969;
+	border-color: #696969
+}
+.panel-gray>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: #696969
+}
+.panel-gray>.panel-heading .badge {
+	color: #696969;
+	background-color: #fff
+}
+.panel-gray>.panel-footer+.panel-collapse>.panel-body {
+	border-bottom-color: #696969
+}
+
+.panel-purple {
+	border-color: #8369B0
+}
+.panel-purple>.panel-heading {
+	color: #fff;
+	background-color: #8369B0;
+	border-color: #8369B0
+}
+.panel-purple>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: #8369B0
+}
+.panel-purple>.panel-heading .badge {
+	color: #8369B0;
+	background-color: #fff
+}
+.panel-purple>.panel-footer+.panel-collapse>.panel-body {
+	border-bottom-color: #8369B0
+}
+
+/*Termina aqui*/
 .panel-success {
 	border-color: #d6e9c6
 }
@@ -5338,3 +5433,60 @@ th.visible-print, td.visible-print {
 	display: none!important
 }
 }
+
+/*EDITADO PARA O SORT*/
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+
+.div_blue{
+	background-color: #3c8fd0  !important;
+}
+/*FIM DO EDITADO PARA SORTE*/
