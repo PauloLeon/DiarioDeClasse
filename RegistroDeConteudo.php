@@ -162,8 +162,13 @@
 					</div>
 					<div id="historico" class="col-lg-8">
 							<div class="panel panel-gray" >
-								<div class="panel-heading">
-									<h3 class="panel-title">Registro de Conteúdo <img src="../DiarioDeClasse/imagens/testeIMG/blue-add-small.png" class="img-responsive pull-right"> </h3>
+								<div class="panel-heading" style="height: 35px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;">
+									<div class="col-md-6">
+										<h3 class="panel-title" style="padding-top: 6px;">Registro de Conteúdo </h3>
+									</div>
+									<div class="col-md-6"style="padding-right: 0px;">
+										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN.png" class="img-responsive pull-right"> </img>
+									</div>
 								</div>
 								<div class="panel-body" style="height:550px;">
 									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">
