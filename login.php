@@ -26,12 +26,12 @@
 	<link rel="stylesheet" href="fonts/stylesheet.css">
 	<link rel="stylesheet" href="imagem/site/ycon.css">
 	<link rel="stylesheet" href="css/site.css">
-	<script type="text/javascript" src="library/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="library/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="library/easing/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="library/local-scroll/jquery.scrollTo-1.4.3.1-min.js"></script>
-	<script type="text/javascript" src="library/local-scroll/jquery.localscroll-1.2.7-min.js"></script>
-	<script type="text/javascript" src="js/bootstrap_site.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/library/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/library/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/library/easing/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/library/local-scroll/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/library/local-scroll/jquery.localscroll-1.2.7-min.js"></script>
+	<script type="text/javascript" src="../DiarioDeClasse/js/bootstrap_site.js"></script>
 </head>
 <body class="interna">
 	<a href="#content" class="sr-only">Ir para o conteúdo</a>
@@ -48,7 +48,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="index1.php#HOME" title="Voltar para a página inicial"><img src="imagem/site/diario-de-classe.png" alt="Diário de Classe"></a>
+								<a class="navbar-brand" href="index1.php#HOME" title="Voltar para a página inicial"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" alt="Diário de Classe"></a>
 							</div>
 							<div class="collapse navbar-collapse navbar-primary">
 								<ul class="nav navbar-nav">
@@ -148,10 +148,10 @@
 									<div class="col-md-10">
 										<div class="media">
 											<div class="media-left marca">
-												<img src="imagem/site/diario-de-classe-white.png" alt="Marca Diário de Classe">
+												<img src="../DiarioDeClasse/imagem/site/diario-de-classe-white.png" alt="Marca Diário de Classe">
 											</div> <!-- .media-left -->
 											<div class="media-left chaves">
-												<img src="imagem/site/chaves-white.png" alt="Chaves">
+												<img src="../DiarioDeClasse/imagem/site/chaves-white.png" alt="Chaves">
 											</div> <!-- .media-left -->
 											<div class="media-body">
 												<span class="texto">
@@ -173,10 +173,10 @@
 								<li><a href="#" title="">Desenvolvedores</a></li>
 							</ul>
 							<div class="download-footer">
-								<a href="#" target="_blank" title="Disponível no Google Play!"><img src="imagem/site/googleplay.png" alt="Disponível no Google Play!"></a>
-								<a href="#" target="_blank" title="Baixar na App Store"><img src="imagem/site/appstore.png" alt="Baixar na App Store"></a>
+								<a href="#" target="_blank" title="Disponível no Google Play!"><img src="../DiarioDeClasse/imagem/site/googleplay.png" alt="Disponível no Google Play!"></a>
+								<a href="#" target="_blank" title="Baixar na App Store"><img src="../DiarioDeClasse/imagem/site/appstore.png" alt="Baixar na App Store"></a>
 							</div> <!-- .download-footer -->
-							<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design" class="sr-only"><img src="imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
+							<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design" class="sr-only"><img src="../DiarioDeClasse/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
 						</div> <!-- .container -->
 					</div> <!-- .site-direitos -->
 				</div> <!-- .extra-footer -->
@@ -226,7 +226,7 @@
 			</div> <!-- .modal-content -->
 		</div> <!-- .modal-dialog -->
 	</div> <!-- #modal-login -->
-	<script src="http://localhost:35729/livereload.js"></script>
+	<script src="../DiarioDeClasse/http://localhost:35729/livereload.js"></script>
 	<script>
 	jQuery(document).ready(function(){
 

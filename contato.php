@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <title>Diário de Classe</title>
@@ -8,10 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../DiarioDeClasse/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../DiarioDeClasse/js/bootstrap.min.js"></script>
   </head>
-  
+
   <body>
     <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
       <style>
@@ -43,7 +43,7 @@
     data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="http://placehold.it/1920x600">
+          <img src="../DiarioDeClasse/http://placehold.it/1920x600">
           <div class="carousel-caption">
             <h2>Title</h2>
             <p>Description</p>
@@ -56,12 +56,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="http://maps.googleapis.com/maps/api/staticmap?center=-1.409487,-48.467333&amp;zoom=15&amp;size=200x200&amp;sensor=false"
+          <img src="../DiarioDeClasse/http://maps.googleapis.com/maps/api/staticmap?center=-1.409487,-48.467333&amp;zoom=15&amp;size=200x200&amp;sensor=false"
           class="img-responsive">
         </div>
       </div>
     </div>
-    <img src="http://placehold.it/1920x600" class="img-responsive" alt="Responsive image">
+    <img src="../DiarioDeClasse/http://placehold.it/1920x600" class="img-responsive" alt="Responsive image">
   </body>
 
 </html>

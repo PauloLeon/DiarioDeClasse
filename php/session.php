@@ -11,7 +11,7 @@ header('Content-Type: text/html; charset=UTF-8');
 	}
 
 	require_once('php/User.php');
-	$redirecionar = "../index1.php";
+	$redirecionar = "../DiarioDeClasse/index1.php";
 	session_start();
 
 	if((!isset ($_SESSION['userLogado']) == true))

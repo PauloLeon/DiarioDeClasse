@@ -23,16 +23,16 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file://
     -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 
   <body>
     <div id="wrapper">
       <!-- Navigation -->
-      <script src="js/jquery-1.11.0.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script src="../DiarioDeClasse/js/jquery-1.11.0.js"></script>
+      <script src="../DiarioDeClasse/js/bootstrap.min.js"></script>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
       draggable="true">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+          <a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">

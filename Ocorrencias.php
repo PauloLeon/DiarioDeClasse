@@ -49,7 +49,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+				<a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
 			</div>
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<ul class="nav navbar-right top-nav">
@@ -155,7 +155,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 										<div class="row">
 											<div class="col-md-2"></div>
 											<div class="col-md-8">
-												<!--<img src="imagens/turmas.png" alt="..." class="img-thumbnail">-->
+												<!--<img src="../DiarioDeClasse/imagens/turmas.png" alt="..." class="img-thumbnail">-->
 											</div>
 											<div class="col-md-2"></div>
 										</div>

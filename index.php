@@ -25,8 +25,8 @@
 <!-- WARNING: Respond.js doesn't work if you view the page via file://
     -->
 <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -37,7 +37,7 @@
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header" >
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
+    <a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
   <!-- Top Menu Items -->
   <ul class="nav navbar-right top-nav ">
     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
@@ -67,11 +67,11 @@
   </div>
   <!-- /.navbar-collapse -->
 </nav>
-<script src="js/jquery-1.11.0.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/morris/raphael.min.js"></script>
-<script src="js/plugins/morris/morris.min.js"></script>
-<script src="js/plugins/morris/morris-data.js"></script>
+<script src="../DiarioDeClasse/js/jquery-1.11.0.js"></script>
+<script src="../DiarioDeClasse/js/bootstrap.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/raphael.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/morris.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/morris-data.js"></script>
 <div id="begin" style="min-height: 100vh; width: 100%; background-color: white;">
   <div class="container-fluid">
     <!-- Page Heading -->
@@ -107,7 +107,7 @@
         <div class="panel panel-primary">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/frequencia_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/frequencia_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">1</div>
@@ -125,7 +125,7 @@
         <div class="panel panel-gray">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/conteudo_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conteudo_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">1</div>
@@ -143,7 +143,7 @@
         <div class="panel panel-red">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/ocorrencias_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/ocorrencias_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">1</div>
@@ -161,7 +161,7 @@
         <div class="panel panel-default panel-green" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/nota_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/nota_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">12</div>
@@ -179,7 +179,7 @@
         <div class="panel panel-yellow" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/conceito_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conceito_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">1</div>
@@ -197,7 +197,7 @@
         <div id="parecer" class="panel panel-purple" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/parecer_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/parecer_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">1</div>

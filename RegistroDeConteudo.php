@@ -48,7 +48,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+				<a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
 			</div>
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<ul class="nav navbar-right top-nav">
@@ -163,7 +163,7 @@
 					<div id="historico" class="col-lg-8">
 							<div class="panel panel-gray" >
 								<div class="panel-heading">
-									<h3 class="panel-title">Registro de Conteúdo <img src="/imagens/testeIMG/blue-add-small.png" class="img-responsive pull-right"> </h3>
+									<h3 class="panel-title">Registro de Conteúdo <img src="../DiarioDeClasse/imagens/testeIMG/blue-add-small.png" class="img-responsive pull-right"> </h3>
 								</div>
 								<div class="panel-body" style="height:550px;">
 									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">

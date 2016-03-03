@@ -5,9 +5,9 @@
 	$varNome="";
 	$varEmailCadastrar="";
     $varSenhaCadastrar="";
-?>	 
+?>
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <title>Diario de Classe</title>
@@ -15,12 +15,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap Core CSS -->
-    
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../DiarioDeClasse/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../DiarioDeClasse/js/bootstrap.min.js"></script>
   </head>
-  
+
   <body>
  <!--Integração com o Facebook, testando ainda-->
   <script>
@@ -41,7 +41,7 @@
   	 }(document, 'script', 'facebook-jssdk'));
  </script>
 
-      
+
       <div class="navbar navbar-default navbar-static-top navbar-inverse">
         <style>
           .body{padding-top:70px}
@@ -59,7 +59,7 @@
         </div>
       </div>
 
-<!--    <img src="http://placehold.it/600x100" class="img-responsive" style="width: 100%; height: 650;">  -->
+<!--    <img src="../DiarioDeClasse/http://placehold.it/600x100" class="img-responsive" style="width: 100%; height: 650;">  -->
       <div>
       <p></p>
       <p></p>
@@ -167,7 +167,7 @@
                   </div>
                 </div>
               </div>
-            
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
