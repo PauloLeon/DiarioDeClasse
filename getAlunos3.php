@@ -27,12 +27,14 @@ foreach($jsonAlunos as $val)
 			 data-toggle=\"modal\"
 			 data-target=\"#editModal\" >
 			 <div class=\"row\">
-			  <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode($val->nmAluno)."</div>
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode($val->nmTurma)."</div>
-					 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img id='".$val->idAluno."GRAY' src='imagens/editGray.png' alt=''> <img id='".$val->idAluno."GREEN' src='imagens/editGreen.png' style='display: none;'' alt=''></div>
-            </div>
+			    <div class=\"col-xs-6 col-sm-6 col-md-6\">".utf8_decode($val->nmAluno)."</div>
+          <div class=\"col-xs-6 col-sm-6 col-md-6\">".utf8_decode($val->nmTurma)."</div>
+			 </div>
 	     </li>";
 
 
 }
+
+//<div class=\"col-xs-4 col-sm-4 col-md-4\"><img id='".$val->idAluno."GRAY' src='imagens/editGray.png' alt=''> <img id='".$val->idAluno."GREEN' src='imagens/editGreen.png' style='display: none;'' alt=''></div>
+
 ?>

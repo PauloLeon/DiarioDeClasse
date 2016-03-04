@@ -35,6 +35,9 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 		max-height: 520px;
 		overflow-x: hidden;
 	}
+	.border-edit-green{
+		border: 2px solid #51B867;
+	}
 	</style>
 </head>
 
@@ -55,7 +58,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>

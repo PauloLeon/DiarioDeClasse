@@ -33,10 +33,10 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
       turma = str;
       var idNameForButton = $(this).attr('idname');
       if (idNameForButton.length>25) {
-        idNameForButton = idNameForButton.substring(0, 26) +"..."; 
+        idNameForButton = idNameForButton.substring(0, 26) +"...";
       }
       $("#begin button[id|=dropdownMenu1]").html(idNameForButton + " <span class=\"caret\"></span>");
-      buscaAlunos(str);
+      buscaAlunos(turma);
   });
 
  //editar alunos
@@ -50,12 +50,11 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
   {
     $("#begin a[id|='delete_btn'").attr("disabled",true);
     if (aluno_antigo != undefined) {
-      $("#editAlunos img[id|="+aluno_antigo+"GRAY]").show();
-      $("#editAlunos img[id|="+aluno_antigo+"GREEN]").hide();
+      $("#editAlunos li[id="+aluno_antigo+"]").removeClass("border-edit-green");
     }
     aluno_atual = id;
-    $("#editAlunos img[id|="+aluno_atual+"GRAY]").hide();
-    $("#editAlunos   img[id|="+aluno_atual+"GREEN]").show();
+    $("#editAlunos li[id="+aluno_atual+"]").addClass("border-edit-green");
+
     aluno_antigo = id;
     buscaOcorrencia(id);
   }
@@ -67,12 +66,10 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
     $("#begin a[id|='delete_btn'").attr("disabled",false);
     aluno_atual = idAluno;
     if (ocorrencia_antiga != undefined) {
-      $("#historico img[id|="+ocorrencia_antiga+"GRAY]").show();
-      $("#historico img[id|="+ocorrencia_antiga+"GREEN]").hide();
+      $("#historico li[id="+ocorrencia_antiga+"]").removeClass("border-edit-green");
     }
     ocorrencia_atual = idOcorrencia;
-    $("#historico img[id|="+ocorrencia_atual+"GRAY]").hide();
-    $("#historico img[id|="+ocorrencia_atual+"GREEN]").show();
+    $("#historico li[id="+ocorrencia_atual+"]").addClass("border-edit-green");
     ocorrencia_antiga = idOcorrencia;
     $("#begin input[id|='textOcorrencia']").val(ocorrencia);
     data = data.replace(/-/g, "/");

@@ -35,6 +35,9 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 		max-height: 520px;
 		overflow-x: hidden;
 	}
+	.border-edit-green{
+		border: 2px solid #51B867;
+	}
 	</style>
 </head>
 
@@ -55,7 +58,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
@@ -144,9 +147,9 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 						<div class="panel panel-red" >
 							<div class="panel-heading">
 								<div class="row">
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Alunos</h3></div>
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Turma</h3></div>
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h4></div>
+									<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Alunos</h3></div>
+									<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Turma</h3></div>
+									<!--<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h4></div>-->
 								</div>
 							</div>
 							<div class="panel-body" style="height:550px;">

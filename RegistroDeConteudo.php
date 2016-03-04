@@ -31,7 +31,7 @@
 	}
 	.scrollable-menu-xl {
 		height: auto;
-		max-height: 520px;
+		max-height: 470px;
 		overflow-x: hidden;
 	}
 	</style>
@@ -54,13 +54,13 @@
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
 						</li>
 						<li>
-							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-envelope"></i> Caixa de Menssagens</a>
+							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-envelope"></i> Caixa de Mensagens</a>
 						</li>
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-gear"></i> Configuração da Conta</a>
@@ -105,7 +105,7 @@
 
 				<div class="row">
 					<div class="col-lg-6">
-						<h2 class="page-header">Registro de Conteúdo</h2	>
+						<h2 class="page-header" style="margin-top: 20px;">Registro de Conteúdo</h2>
 						</div>
 						<div class="col-lg-6 pull-right" style="float:right;">
 							<div class="form-group" style="margin-bottom: 0px; margin-top: 10px;">
@@ -113,7 +113,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-md-offset-8  col-md-4">
-												<div class="dropdown ">
+												<div class="dropdown" style="margin-top: 12px;">
 													<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
 													<ul id="escolhaTurma" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
 														<?php
@@ -145,8 +145,8 @@
 									<div class="col-xs-12 col-sm-12 col-md-12"><h3 class="panel-title">Disciplinas</h3></div>
 								</div>
 							</div>
-							<div class="panel-body" style="height:550px;">
-								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">
+							<div class="panel-body" style="height:500px;">
+								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:470px;">
 									<ul id="editAlunos" class="list-group" >
 										<div class="row">
 											<div class="col-md-2"></div>
@@ -170,8 +170,8 @@
 										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN.png" class="img-responsive pull-right"> </img>
 									</div>
 								</div>
-								<div class="panel-body" style="height:550px;">
-									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">
+								<div class="panel-body" style="height:503px;">
+									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:470px;">
 									<ul id="editParecer" class="list-group" >
 									</ul>
 								</div>
