@@ -1,28 +1,25 @@
 <?php
-	include 'php/session.php';
-	$varNome = "";
-	$varCidade = "";
-	$jsonEscolas=$userLogado->getEscolasJSON($userLogado->getId());
+    include 'php/session.php';
+    $varNome = '';
+    $varCidade = '';
+    $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
-	  if (!empty($_GET['formSubmit']))
-	  {
-		 $varNome =  $_GET['inputNome'];
-    	 $varCidade = $_GET['inputCidade'];
-  		 $userLogado->insertEscolaBanco(trim($varNome),trim($varCidade),$userLogado->getId());
- 	  }
+      if (!empty($_GET['formSubmit'])) {
+          $varNome = $_GET['inputNome'];
+          $varCidade = $_GET['inputCidade'];
+          $userLogado->insertEscolaBanco(trim($varNome), trim($varCidade), $userLogado->getId());
+      }
 
-	  if (!empty($_GET['formEditSubmit']))
-	  {
-		 $varNomeEdit =  $_GET['inputNomeEdit'];
-    	 $varCidadeEdit = $_GET['inputCidadeEdit'];
-		 $varIdEdit =  $_GET['inputIdEdit'];
-  		 $userLogado->updateEscola(trim($varNomeEdit),trim($varCidadeEdit),trim($varIdEdit),$userLogado->getId());
- 	  }
-	  if (!empty($_GET['formEditSubmitDelete']))
-	  {
-		 $varIdEdit =  $_GET['inputIdEdit'];
-  		 $userLogado->removeEscola(trim($varIdEdit));
- 	  }
+      if (!empty($_GET['formEditSubmit'])) {
+          $varNomeEdit = $_GET['inputNomeEdit'];
+          $varCidadeEdit = $_GET['inputCidadeEdit'];
+          $varIdEdit = $_GET['inputIdEdit'];
+          $userLogado->updateEscola(trim($varNomeEdit), trim($varCidadeEdit), trim($varIdEdit), $userLogado->getId());
+      }
+      if (!empty($_GET['formEditSubmitDelete'])) {
+          $varIdEdit = $_GET['inputIdEdit'];
+          $userLogado->removeEscola(trim($varIdEdit));
+      }
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,7 +55,7 @@
 
       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
         <?php
-										echo $userLogado->getNome();?>
+                                        echo $userLogado->getNome();?>
         <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li> <a href="#" style="color: #428bca;" ><i class="fa fa-fw fa-user"></i> Perfil</a> </li>
@@ -78,18 +75,18 @@
       <li>
                   <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
                 </li>
-                <li>
-                  <a href="Cadastrar.php">Instituição/Escola</a>
-                </li>
-                <li>
-                  <a href="CadastrarDisciplina.php">Disciplina</a>
-                </li>
-                <li>
-                  <a href="CadastroTurma.php">Turma</a>
-                </li>
-                <li>
-                  <a href="CadastrarAluno.php">Aluno</a>
-                </li>
+								<li>
+		              <a href="Cadastrar.php">Instituições de Ensino</a>
+		            </li>
+		            <li>
+		              <a href="CadastrarDisciplina.php">Disciplinas</a>
+		            </li>
+		            <li>
+		              <a href="CadastroTurma.php">Turmas</a>
+		            </li>
+		            <li>
+		              <a href="CadastrarAluno.php">Alunos</a>
+		            </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -100,7 +97,7 @@
 			<div class="col-lg-12" id="users_2">
       <div class="row">
         <div class="col-lg-12" >
-          <h1 class="page-header">Cadastro <small>de Instituição/Escola</small> </h1>
+          <h3 class="page-header">Cadastro de Instituições de Ensino </h3>
           <!--<ol class="breadcrumb" draggable="true">
             <li class="active"> <i class="fa fa-desktop"></i>&nbsp;Cadastrar / Escola</li>
           </ol>-->
@@ -159,21 +156,18 @@
               <?php
                   $jsonEscolas = json_decode($jsonEscolas);
                   //debug_to_console($jsonEscolas);
-                  if(empty($jsonEscolas))
-                  {
-                      echo"<li class=\"list-group-item\">"."Você ainda não tem escolas cadastradas."."</li>";
+                  if (empty($jsonEscolas)) {
+                      echo'<li class="list-group-item">'.'Você ainda não tem escolas cadastradas.'.'</li>';
                   }
 
-                  foreach($jsonEscolas as $val)
-                  {
-
-                  echo"<li
-				  id=".$val->idEscola."
-				  nome=\"".utf8_decode($val->nome)."\"
-				  cidade=\"".utf8_decode($val->cidade)."\" class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\">
-				  <div class=\"escolaSearch row\">
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode ($val->nome)."</div>
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode ($val->cidade)."</div>
+                  foreach ($jsonEscolas as $val) {
+                      echo'<li
+				  id='.$val->idEscola.'
+				  nome="'.utf8_decode($val->nome).'"
+				  cidade="'.utf8_decode($val->cidade).'" class="list-group-item"  data-toggle="modal" data-target="#editModal">
+				  <div class="escolaSearch row">
+             		 <div class="col-xs-4 col-sm-4 col-md-4">'.utf8_decode($val->nome).'</div>
+             		 <div class="col-xs-4 col-sm-4 col-md-4">'.utf8_decode($val->cidade)."</div>
 					 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img src='imagens/editGray.png' alt=''></div>
            		 </div>
 				</li>";
@@ -301,5 +295,5 @@
 </body>
 </html>
 <?php
-echo file_get_contents(dirname(__FILE__)."/Scripts/CadastrarScript.php", true);
+echo file_get_contents(dirname(__FILE__).'/Scripts/CadastrarScript.php', true);
 ?>

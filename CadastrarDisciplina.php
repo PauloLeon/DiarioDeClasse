@@ -63,21 +63,11 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class=" div_blue nav navbar-nav side-nav">
         <li> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a> </li>
-        <li>
-                  <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-                </li>
-                <li>
-                  <a href="Cadastrar.php">Instituição/Escola</a>
-                </li>
-                <li>
-                  <a href="CadastrarDisciplina.php">Disciplina</a>
-                </li>
-                <li>
-                  <a href="CadastroTurma.php">Turma</a>
-                </li>
-                <li>
-                  <a href="CadastrarAluno.php">Aluno</a>
-                </li>
+        <li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+				<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+		    <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+        <li><a href="CadastroTurma.php">Turmas</a></li>
+        <li><a href="CadastrarAluno.php">Alunos</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -88,7 +78,7 @@
       <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12" id="disciplina">
-         <h1 class="page-header">Cadastro  <small>de Disciplina</small> </h1>
+         <h3 class="page-header">Cadastro de Disciplinas </h3>
   <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">

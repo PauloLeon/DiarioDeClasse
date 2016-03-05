@@ -124,16 +124,16 @@ if (!empty($_GET['formEditSubmitDelete']))
 						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
 					</li>
 					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
+						<a href="Cadastrar.php">Instituições de Ensino</a>
 					</li>
 					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
+						<a href="CadastrarDisciplina.php">Disciplinas</a>
 					</li>
 					<li>
-						<a href="CadastroTurma.php">Turma</a>
+						<a href="CadastroTurma.php">Turmas</a>
 					</li>
 					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
+						<a href="CadastrarAluno.php">Alunos</a>
 					</li>
 				</ul>
 			</div>
@@ -144,7 +144,7 @@ if (!empty($_GET['formEditSubmitDelete']))
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12" id="turma">
-						<h1 class="page-header">Cadastro <small>de Turma</small> </h1>
+						<h3 class="page-header">Cadastro de Turmas </h3>
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">

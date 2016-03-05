@@ -34,6 +34,9 @@
 		max-height: 470px;
 		overflow-x: hidden;
 	}
+	.border-edit-green{
+		border: 2px solid #51B867;
+	}
 	</style>
 </head>
 
@@ -112,10 +115,10 @@
 								<!--<div id="exemplo"></div>-->
 									<div class="form-group">
 										<div class="row">
-											<div class="col-md-offset-8  col-md-4">
+											<div class="col-md-8  col-md-4">
 												<div class="dropdown" style="margin-top: 12px;">
 													<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
-													<ul id="escolhaTurma" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+													<ul id="escolhaTurma" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 														<?php
 														$jsonTurmas = json_decode($jsonTurmas);
 														if(empty($jsonTurmas))
@@ -129,7 +132,7 @@
 														}
 														?>
 													</ul>
-												</div>&nbsp;
+												</div>
 									</div>
 								</div>
 							</div>
@@ -147,13 +150,9 @@
 							</div>
 							<div class="panel-body" style="height:500px;">
 								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:470px;">
-									<ul id="editAlunos" class="list-group" >
+									<ul id="editDisciplinas" class="list-group" >
 										<div class="row">
-											<div class="col-md-2"></div>
-											<div class="col-md-8">
-												<!--<img src="imagens/turmas.png" alt="..." class="img-thumbnail">-->
-											</div>
-											<div class="col-md-2"></div>
+											<div class="col-md-12"></div>
 										</div>
 									</ul>
 								</div>
@@ -205,5 +204,5 @@
 </body>
 </html>
 <?php
-echo file_get_contents(dirname(__FILE__)."/Scripts/ParecerScript.php", true);
+echo file_get_contents(dirname(__FILE__)."/Scripts/ConteudoScript.php", true);
 ?>

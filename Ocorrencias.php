@@ -27,12 +27,12 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 	<style>
 	.scrollable-menu {
 		height: auto;
-		max-height: 275px;
+		max-height: 235px;
 		overflow-x: hidden;
 	}
 	.scrollable-menu-xl {
 		height: auto;
-		max-height: 520px;
+		max-height: 470px;
 		overflow-x: hidden;
 	}
 	.border-edit-green{
@@ -109,17 +109,17 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 				<div class="row">
 					<div class="col-lg-6">
-						<h2 class="page-header">Ocorrências</h2	>
+						<h2 class="page-header"  style="margin-top: 20px;">Ocorrências</h2	>
 						</div>
 						<div class="col-lg-6 pull-right" style="float:right;">
 							<div class="form-group" style="margin-bottom: 0px; margin-top: 10px;">
 								<!--<div id="exemplo"></div>-->
 									<div class="form-group">
 										<div class="row">
-											<div class="col-md-offset-8  col-md-4">
-												<div class="dropdown ">
+											<div class="col-md-7  col-md-4">
+												<div class="dropdown "  style="margin-top: 13px;">
 													<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
-													<ul id="escolhaTurma" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+													<ul id="escolhaTurma" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 														<?php
 														$jsonTurmas = json_decode($jsonTurmas);
 														if(empty($jsonTurmas))
@@ -133,7 +133,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 														}
 														?>
 													</ul>
-												</div>&nbsp;
+												</div>
 									</div>
 								</div>
 							</div>
@@ -152,7 +152,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 									<!--<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h4></div>-->
 								</div>
 							</div>
-							<div class="panel-body" style="height:550px;">
+							<div class="panel-body" style="height:500px;">
 								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(230,143,141,0.3); height:520px;">
 									<ul id="editAlunos" class="list-group" >
 										<div class="row">
@@ -173,7 +173,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 								<div class="panel-heading">
 									<h3 class="panel-title">Histórico</h3>
 								</div>
-								<div class="panel-body" style="height:300px;">
+								<div class="panel-body" style="height:270px;">
 									<div class="thumbnail scrollable-menu" role="menu" style="background-color: rgba(230,143,141,0.3); height:275px;">
 									<ul id="editOcorrencias" class="list-group" >
 									</ul>
@@ -185,7 +185,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 								<div class="panel-heading">
 									<h3 class="panel-title">Ocorrências</h3>
 								</div>
-								<div class="panel-body" style="height:190px;">
+								<div class="panel-body" style="height:170px;">
 							<div id="exemplo" class="input-group date" data-provide="datepicker">
 								<input id="calendar" type="text"  value="" class="form-control">
 								<div class="input-group-addon">

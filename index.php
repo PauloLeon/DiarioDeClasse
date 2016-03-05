@@ -58,10 +58,10 @@
     <ul class="div_blue nav navbar-nav side-nav "  >
       <li class="active"> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard </a> </li>
       <li> <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a> </li>
-      <li> <a href="Cadastrar.php">Instituição/Escola</a> </li>
-      <li> <a href="CadastrarDisciplina.php">Disciplina</a> </li>
-      <li> <a href="CadastroTurma.php">Turma</a> </li>
-      <li> <a href="CadastrarAluno.php">Aluno</a> </li>
+			<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+			<li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+			<li><a href="CadastroTurma.php">Turmas</a></li>
+			<li><a href="CadastrarAluno.php">Alunos</a></li>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
@@ -222,11 +222,3 @@
 <!-- Morris Charts JavaScript -->
 </body>
 </html>
-<script>
-$("#begin div[id|='parecer'").children().attr('disabled',true);//desabilitando os modulos não finalizados
-var nodes = document.getElementById("parecer").getElementsByTagName('*');
-for(var i = 0; i < nodes.length; i++)
-{
-     nodes[i].disabled = true;
-}
-</script>

@@ -88,16 +88,16 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
 					</li>
 					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
+						<a href="Cadastrar.php">Instituições de Ensino</a>
 					</li>
 					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
+						<a href="CadastrarDisciplina.php">Disciplinas</a>
 					</li>
 					<li>
-						<a href="CadastroTurma.php">Turma</a>
+						<a href="CadastroTurma.php">Turmas</a>
 					</li>
 					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
+						<a href="CadastrarAluno.php">Alunos</a>
 					</li>
 				</ul>
 			</div>
