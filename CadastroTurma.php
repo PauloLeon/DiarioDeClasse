@@ -120,21 +120,11 @@ if (!empty($_GET['formEditSubmitDelete']))
 			<div class="  collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="div_blue nav navbar-nav side-nav">
 					<li> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a> </li>
-					<li>
-						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-					</li>
-					<li>
-						<a href="Cadastrar.php">Instituições de Ensino</a>
-					</li>
-					<li>
-						<a href="CadastrarDisciplina.php">Disciplinas</a>
-					</li>
-					<li>
-						<a href="CadastroTurma.php">Turmas</a>
-					</li>
-					<li>
-						<a href="CadastrarAluno.php">Alunos</a>
-					</li>
+					<li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+					<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+					<li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+					<li><a href="CadastroTurma.php">Turmas</a></li>
+					<li><a href="CadastrarAluno.php">Alunos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -144,7 +134,7 @@ if (!empty($_GET['formEditSubmitDelete']))
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12" id="turma">
-						<h3 class="page-header">Cadastro de Turmas </h3>
+						<h3 class="page-header" style="margin-top: 20px;" >Cadastro de Turmas </h3>
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
@@ -183,10 +173,9 @@ if (!empty($_GET['formEditSubmitDelete']))
 								<div class="panel panel-primary" >
 									<div class="panel-heading">
 										<div class="row">
-											<div class="col-xs-3 col-sm-3 col-md-3"><h3 class="panel-title">Turmas</h3></div>
-											<div class="col-xs-3 col-sm-3 col-md-3"><h3 class="panel-title">Escola</h3></div>
-											<div class="col-xs-3 col-sm-3 col-md-3"><h3 class="panel-title">Turno</h3></div>
-											<div class="col-xs-3 col-sm-3 col-md-3"><h3 class="panel-title">Editar</h3></div>
+											<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Turmas</h3></div>
+											<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Escola</h3></div>
+											<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Turno</h3></div>
 										</div>
 									</div>
 									<div class="panel-body">
@@ -229,11 +218,10 @@ if (!empty($_GET['formEditSubmitDelete']))
 													class=\"list-group-item\"
 													data-toggle=\"modal\" data-target=\"#editModal\"  >
 													<div class=\"turmaSearch row\">
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">".$val->nmTurma."</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">".$val->nmEscola."</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmTurma."</div>
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmEscola."</div>
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">
 													<span class=\"label label-paulo\" style=\" color:".$spanClass.";\" >".$val->turno."</span>&nbsp;</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\"><img src='imagens/editGray.png' alt=''></div>
 													</div>
 													</li>";
 												}else{
@@ -260,11 +248,10 @@ if (!empty($_GET['formEditSubmitDelete']))
 													class=\"list-group-item\"
 													data-toggle=\"modal\" data-target=\"#editModal\"  >
 													<div class=\"turmaSearch row\">
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">".$val->nmTurma."</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">".$val->nmEscola."</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\">
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmTurma."</div>
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmEscola."</div>
+													<div class=\"col-xs-4 col-sm-4 col-md-4\">
 													<span class=\"label label-paulo\" style=\" color:".$spanClass.";\" >".$val->turno."</span>&nbsp;</div>
-													<div class=\"col-xs-3 col-sm-3 col-md-3\"><img src='imagens/editGray.png' alt=''></div>
 													</div>
 													</li>";
 												}
@@ -342,9 +329,6 @@ if (!empty($_GET['formEditSubmitDelete']))
 	<!--FIM MODALDIALOG-->
 </div>
 <!--FIM MODALFADE-->
-
-
-
 <!--MODAL INCLUIR-->
 <div class="modal fade" id="incluirModal">
 	<div class="modal-dialog">

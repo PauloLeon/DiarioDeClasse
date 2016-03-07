@@ -103,58 +103,62 @@
     </div>
     <div class="row">
 			<div class="col-lg-4 col-md-4">
+				<a href="TurmaDisciplina.php">
         <div class="panel panel-primary">
           <div class="panel-heading">
             <div class="row">
+
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/frequencia_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Frequencias</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Frequencias</div>
               </div>
             </div>
           </div>
-          <a href="TurmaDisciplina.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-          </a> </div>
+        </div>
+				</a>
       </div>
       <div class="col-lg-4 col-md-4">
+				<a href="RegistroDeConteudo.php">
         <div class="panel panel-gray">
           <div class="panel-heading">
             <div class="row">
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conteudo_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Conteúdo</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Conteúdo</div>
               </div>
             </div>
           </div>
-          <a href="RegistroDeConteudo.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-				<!--</a>--> </div>
+				</div>
+				</a>
       </div>
 			<div class="col-lg-4 col-md-4">
+				<a href="Ocorrencias.php">
         <div class="panel panel-red">
           <div class="panel-heading">
             <div class="row">
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/ocorrencias_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Ocorrências</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Ocorrências</div>
               </div>
             </div>
           </div>
-          <a href="Ocorrencias.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-          </a> </div>
+          </div>
+				</a>
       </div>
 			<div class="col-lg-4 col-md-4">
         <div class="panel panel-default panel-green" style="opacity: 0.5;">
@@ -163,8 +167,7 @@
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/nota_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">12</div>
-                <div>Notas</div>
+                <div style="margin-top: 50px;">Notas</div>
               </div>
             </div>
           </div>
@@ -181,8 +184,7 @@
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conceito_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Conceitos</div>
+                <div style="margin-top: 50px;">Conceitos</div>
               </div>
             </div>
           </div>
@@ -199,8 +201,7 @@
               <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/parecer_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Parecer</div>
+                <div style="margin-top: 50px;">Parecer</div>
               </div>
             </div>
           </div>

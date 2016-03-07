@@ -93,14 +93,15 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
                  document.getElementById("editDisciplinas").innerHTML = xmlhttp.responseText;
               }
           }
-          xmlhttp.open("GET","getDisciplinas3.php?q="+str,true);
+          xmlhttp.open("GET","getDisciplina.php?q="+str,true);
           xmlhttp.send();
       }
   }
 
-  //busca de todas as Conteudo por disciplina em Ajax
-  function buscaConteudo(str) {
-      if (str == "") {
+  //busca de todas as Conteudo por disciplina/turma em Ajax
+  //tenho que rever por que passa mais de um parametro pelo get
+  function buscaConteudo(disciplina, turma) {
+      if (disciplina == "" || turma == "") {
           document.getElementById("txtHint").innerHTML = "";
           return;
       } else {
@@ -117,7 +118,7 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
                  document.getElementById("editConteudo").innerHTML = xmlhttp.responseText;
               }
           }
-          xmlhttp.open("GET","getAllConteudo.php?q="+str,true);
+          xmlhttp.open("GET","getAllConteudo.php?dis="+disciplina,true);
           xmlhttp.send();
       }
   }

@@ -81,24 +81,12 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 			menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="div_blue nav navbar-nav side-nav">
-					<li>
-						<a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
-					</li>
-					<li>
-						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-					</li>
-					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
-					</li>
-					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
-					</li>
-					<li>
-						<a href="CadastroTurma.php">Turma</a>
-					</li>
-					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
-					</li>
+					<li><a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a></li>
+					<li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+					<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+	        <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+	        <li><a href="CadastroTurma.php">Turmas</a></li>
+	        <li><a href="CadastrarAluno.php">Alunos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -170,17 +158,22 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 					<div id="historico" class="col-lg-6">
 							<div class="panel panel-red" >
-								<div class="panel-heading">
-									<h3 class="panel-title">Histórico</h3>
+								<div class="panel-heading" style="height: 35px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;">
+									<div class="col-md-6">
+										<h3 class="panel-title" style="padding-top: 6px;">Histórico</h3>
+									</div>
+									<div class="col-md-6"style="padding-right: 0px;">
+										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN-red.png" class="img-responsive pull-right"> </img>
+									</div>
 								</div>
-								<div class="panel-body" style="height:270px;">
-									<div class="thumbnail scrollable-menu" role="menu" style="background-color: rgba(230,143,141,0.3); height:275px;">
+								<div class="panel-body" style="height:500px;">
+									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(230,143,141,0.3); height:520px;">
 									<ul id="editOcorrencias" class="list-group" >
 									</ul>
 								</div>
 								</div>
 						</div>
-						<div class="form-group">
+						<!--<div class="form-group">
 							<div class="panel panel-red" >
 								<div class="panel-heading">
 									<h3 class="panel-title">Ocorrências</h3>
@@ -202,7 +195,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 						</div>
 
-					</div>
+					</div>-->
 				</div>
 			</form>
 			<!-- /.row -->

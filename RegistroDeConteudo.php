@@ -80,24 +80,12 @@
 			menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="div_blue nav navbar-nav side-nav">
-					<li>
-						<a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
-					</li>
-					<li>
-						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-					</li>
-					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
-					</li>
-					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
-					</li>
-					<li>
-						<a href="CadastroTurma.php">Turma</a>
-					</li>
-					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
-					</li>
+					<li><a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a></li>
+					<li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+					<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+	        <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+	        <li><a href="CadastroTurma.php">Turmas</a></li>
+	        <li><a href="CadastrarAluno.php">Alunos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

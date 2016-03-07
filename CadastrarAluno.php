@@ -100,13 +100,13 @@
         <div class="col-lg-12" id="alunos">
           <div class="row">
             <div class="col-lg-6">
-              <h3 class="page-header">Cadastro de Alunos</h3>
+              <h3 class="" style="margin-top: 20px;" >Cadastro de Alunos</h3>
             </div>
             <div class="col-md-6">
-              <h1 class="page-header" style="padding-bottom: 10px;margin-top: 25px;margin-bottom: 22px;">
+              <h1 class="" style="padding-bottom: 10px;margin-top: 4px;margin-bottom: 22px;">
                 <div class="dropdown ">
                 <button style="margin-left: 160px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
-                <ul id="escolhaTurma" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <ul id="escolhaTurma" style="margin-left: 160px;" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                   <?php
                     $jsonTurmas = json_decode($jsonTurmas);
                     if (empty($jsonTurmas)) {
@@ -122,11 +122,12 @@
             </h1>
             </div>
             <div class="form-group" style="margin-bottom: 10px;">
+              <h3 class="page-header"></h3> <!-- Somente para criar a linha embaixo do titulo-->
               <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                   <div class="row hidden-xs ">
-                    <div class="col-sm-2 col-md-2" style="height: 35px;">
+                    <div class="col-sm-6 col-md-6" style="height: 35px;">
                       <h3 class="panel-title">
                         <div class="form-group">
                           <button class="btn btn-success" data-toggle="modal" data-target="#incluirModal" name="incluir" onClick="" value="submit_insert">
@@ -136,13 +137,13 @@
                         </div>
                       </h3>
                     </div>
-                    <div class="col-sm-10 col-md-10">
+                    <div class="col-sm-6 col-md-6">
                       <h3 class="panel-title">
-                      <div class="input-group" style="margin-left: 5px">
-                        <span class="input-group-addon " id="basic-addon1">
+                      <div class="input-group pull-right" style="margin-left: 5px">
+                        <input class="search pull-right" placeholder="Pesquisar" aria-describedby="basic-addon1" style="height: 30px;"/>
+                        <span class="input-group-addon" id="basic-addon1">
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         </span>
-                        <input class="search" placeholder="Pesquisar" aria-describedby="basic-addon1" style="height: 30px;"/>
                       </div>
                     </h3>
                     </div>
@@ -171,12 +172,10 @@
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <div class="row">
-                      <div class="col-xs-4 col-sm-4 col-md-4">
+                      <div class="col-xs-6 col-sm-6 col-md-6">
                         <h3 class="panel-title">Alunos</h3></div>
-                      <div class="col-xs-4 col-sm-4 col-md-4">
+                      <div class="col-xs-6 col-sm-6 col-md-6">
                         <h3 class="panel-title">Turma</h3></div>
-                      <div class="col-xs-4 col-sm-4 col-md-4">
-                        <h3 class="panel-title">Editar</h3></div>
                     </div>
                   </div>
                   <div class="panel-body">

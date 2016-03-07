@@ -78,7 +78,7 @@
       <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12" id="disciplina">
-         <h3 class="page-header">Cadastro de Disciplinas </h3>
+         <h3 class="page-header" style="margin-top: 20px;" >Cadastro de Disciplinas </h3>
   <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -121,8 +121,7 @@
 
               <div class="panel-heading">
                 <div class="row">
-		<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Disciplinas</h3></div>
-        <div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Editar</h3></div>
+		<div class="col-xs-12 col-sm-12 col-md-12"><h3 class="panel-title">Disciplinas</h3></div>
         </div>
               </div>
 
@@ -137,10 +136,9 @@
                         foreach($jsonDisciplinas as $val)
                         {
 
-							echo"<li class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\">
+							echo"<li class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\" style=\"padding-top: 15px;padding-bottom: 15px;\">
 				  <div class=\"disciplinaSearch row\">
-             		 <div class=\"col-xs-6 col-sm-6 col-md-6\">".utf8_decode($val->nome)."</div>
-					 <div class=\"col-xs-6 col-sm-6 col-md-6\"><img src='imagens/editGray.png' alt=''></div>
+             		 <div class=\"col-xs-12 col-sm-12 col-md-12\">".utf8_decode($val->nome)."</div>
            		 </div>
 				</li>";
                         }

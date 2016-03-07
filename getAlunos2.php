@@ -27,9 +27,8 @@ foreach($jsonAlunos as $val)
 			 data-toggle=\"modal\"
 			 data-target=\"#editModal\" >
 			 <div class=\"alunoSearch row\">
-			  <div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmAluno."</div>
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->nmTurma."</div>
-					 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img src='imagens/editGray.png' alt=''></div>
+			  <div class=\"col-xs-6 col-sm-6 col-md-6\">".$val->nmAluno."</div>
+             		 <div class=\"col-xs-6 col-sm-6 col-md-6\">".$val->nmTurma."</div>
             </div>
 	     </li>";
 
