@@ -31,8 +31,11 @@
 	}
 	.scrollable-menu-xl {
 		height: auto;
-		max-height: 520px;
+		max-height: 470px;
 		overflow-x: hidden;
+	}
+	.border-edit-green{
+		border: 2px solid #51B867;
 	}
 	</style>
 </head>
@@ -48,19 +51,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+				<a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
 			</div>
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
 						</li>
 						<li>
-							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-envelope"></i> Caixa de Menssagens</a>
+							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-envelope"></i> Caixa de Mensagens</a>
 						</li>
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-gear"></i> Configuração da Conta</a>
@@ -77,24 +80,12 @@
 			menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="div_blue nav navbar-nav side-nav">
-					<li>
-						<a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
-					</li>
-					<li>
-						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-					</li>
-					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
-					</li>
-					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
-					</li>
-					<li>
-						<a href="CadastroTurma.php">Turma</a>
-					</li>
-					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
-					</li>
+					<li><a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a></li>
+					<li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+					<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+	        <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+	        <li><a href="CadastroTurma.php">Turmas</a></li>
+	        <li><a href="CadastrarAluno.php">Alunos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -105,17 +96,17 @@
 
 				<div class="row">
 					<div class="col-lg-6">
-						<h2 class="page-header">Registro de Conteúdo</h2	>
+						<h2 class="page-header" style="margin-top: 20px;">Registro de Conteúdo</h2>
 						</div>
 						<div class="col-lg-6 pull-right" style="float:right;">
 							<div class="form-group" style="margin-bottom: 0px; margin-top: 10px;">
 								<!--<div id="exemplo"></div>-->
 									<div class="form-group">
 										<div class="row">
-											<div class="col-md-offset-8  col-md-4">
-												<div class="dropdown ">
+											<div class="col-md-8  col-md-4">
+												<div class="dropdown" style="margin-top: 12px;">
 													<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
-													<ul id="escolhaTurma" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+													<ul id="escolhaTurma" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 														<?php
 														$jsonTurmas = json_decode($jsonTurmas);
 														if(empty($jsonTurmas))
@@ -129,7 +120,7 @@
 														}
 														?>
 													</ul>
-												</div>&nbsp;
+												</div>
 									</div>
 								</div>
 							</div>
@@ -145,15 +136,11 @@
 									<div class="col-xs-12 col-sm-12 col-md-12"><h3 class="panel-title">Disciplinas</h3></div>
 								</div>
 							</div>
-							<div class="panel-body" style="height:550px;">
-								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">
-									<ul id="editAlunos" class="list-group" >
+							<div class="panel-body" style="height:500px;">
+								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:470px;">
+									<ul id="editDisciplinas" class="list-group" >
 										<div class="row">
-											<div class="col-md-2"></div>
-											<div class="col-md-8">
-												<!--<img src="imagens/turmas.png" alt="..." class="img-thumbnail">-->
-											</div>
-											<div class="col-md-2"></div>
+											<div class="col-md-12"></div>
 										</div>
 									</ul>
 								</div>
@@ -162,11 +149,16 @@
 					</div>
 					<div id="historico" class="col-lg-8">
 							<div class="panel panel-gray" >
-								<div class="panel-heading">
-									<h3 class="panel-title">Registro de Conteúdo <img src="/imagens/testeIMG/blue-add-small.png" class="img-responsive pull-right"> </h3>
+								<div class="panel-heading" style="height: 35px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;">
+									<div class="col-md-6">
+										<h3 class="panel-title" style="padding-top: 6px;">Registro de Conteúdo </h3>
+									</div>
+									<div class="col-md-6"style="padding-right: 0px;">
+										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN.png" class="img-responsive pull-right"> </img>
+									</div>
 								</div>
-								<div class="panel-body" style="height:550px;">
-									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:520px;">
+								<div class="panel-body" style="height:503px;">
+									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(105,105,105,0.3); height:470px;">
 									<ul id="editParecer" class="list-group" >
 									</ul>
 								</div>
@@ -200,5 +192,5 @@
 </body>
 </html>
 <?php
-echo file_get_contents(dirname(__FILE__)."/Scripts/ParecerScript.php", true);
+echo file_get_contents(dirname(__FILE__)."/Scripts/ConteudoScript.php", true);
 ?>

@@ -1,28 +1,25 @@
 <?php
-	include 'php/session.php';
-	$varNome = "";
-	$varCidade = "";
-	$jsonEscolas=$userLogado->getEscolasJSON($userLogado->getId());
+    include 'php/session.php';
+    $varNome = '';
+    $varCidade = '';
+    $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
-	  if (!empty($_GET['formSubmit']))
-	  {
-		 $varNome =  $_GET['inputNome'];
-    	 $varCidade = $_GET['inputCidade'];
-  		 $userLogado->insertEscolaBanco(trim($varNome),trim($varCidade),$userLogado->getId());
- 	  }
+      if (!empty($_GET['formSubmit'])) {
+          $varNome = $_GET['inputNome'];
+          $varCidade = $_GET['inputCidade'];
+          $userLogado->insertEscolaBanco(trim($varNome), trim($varCidade), $userLogado->getId());
+      }
 
-	  if (!empty($_GET['formEditSubmit']))
-	  {
-		 $varNomeEdit =  $_GET['inputNomeEdit'];
-    	 $varCidadeEdit = $_GET['inputCidadeEdit'];
-		 $varIdEdit =  $_GET['inputIdEdit'];
-  		 $userLogado->updateEscola(trim($varNomeEdit),trim($varCidadeEdit),trim($varIdEdit),$userLogado->getId());
- 	  }
-	  if (!empty($_GET['formEditSubmitDelete']))
-	  {
-		 $varIdEdit =  $_GET['inputIdEdit'];
-  		 $userLogado->removeEscola(trim($varIdEdit));
- 	  }
+      if (!empty($_GET['formEditSubmit'])) {
+          $varNomeEdit = $_GET['inputNomeEdit'];
+          $varCidadeEdit = $_GET['inputCidadeEdit'];
+          $varIdEdit = $_GET['inputIdEdit'];
+          $userLogado->updateEscola(trim($varNomeEdit), trim($varCidadeEdit), trim($varIdEdit), $userLogado->getId());
+      }
+      if (!empty($_GET['formEditSubmitDelete'])) {
+          $varIdEdit = $_GET['inputIdEdit'];
+          $userLogado->removeEscola(trim($varIdEdit));
+      }
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,8 +38,14 @@
 <!-- Morris Charts CSS -->
 <link href="css/plugins/morris.css" rel="stylesheet">
 <!-- Custom Fonts -->
-<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
-    type="text/css">
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"type="text/css">
+<style>
+  .scrollable-menu {
+    height: auto;
+    max-height: 235px;
+    overflow-x: hidden;
+  }
+</style>
 </head>
 
 <body>
@@ -52,13 +55,13 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
+      <a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
 
       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
         <?php
-										echo $userLogado->getNome();?>
+                                        echo $userLogado->getNome();?>
         <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li> <a href="#" style="color: #428bca;" ><i class="fa fa-fw fa-user"></i> Perfil</a> </li>
@@ -73,23 +76,12 @@
         menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="div_blue nav navbar-nav side-nav">
-        <li> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard
-          </a> </li>
-      <li>
-                  <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-                </li>
-                <li>
-                  <a href="Cadastrar.php">Instituição/Escola</a>
-                </li>
-                <li>
-                  <a href="CadastrarDisciplina.php">Disciplina</a>
-                </li>
-                <li>
-                  <a href="CadastroTurma.php">Turma</a>
-                </li>
-                <li>
-                  <a href="CadastrarAluno.php">Aluno</a>
-                </li>
+        <li> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a> </li>
+        <li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+				<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+        <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+        <li><a href="CadastroTurma.php">Turmas</a></li>
+        <li><a href="CadastrarAluno.php">Alunos</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -100,7 +92,7 @@
 			<div class="col-lg-12" id="users_2">
       <div class="row">
         <div class="col-lg-12" >
-          <h1 class="page-header">Cadastro <small>de Instituição/Escola</small> </h1>
+          <h3 class="page-header" style="margin-top: 20px;"  >Cadastro de Instituições de Ensino </h3>
           <!--<ol class="breadcrumb" draggable="true">
             <li class="active"> <i class="fa fa-desktop"></i>&nbsp;Cadastrar / Escola</li>
           </ol>-->
@@ -147,45 +139,35 @@
          <div class="panel panel-primary" >
       <div class="panel-heading">
       <div class="row">
-		<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Escolas</h3></div>
-        <div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Cidades</h3></div>
-        <div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h3></div>
+		      <div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Escolas</h3></div>
+          <div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Cidades</h3></div>
         </div>
       </div>
-      <div class="panel-body">
+      <div class="panel-body scrollable-menu">
+         <ul id="listEscolas" class="list list-group" >
+          <?php
+              $jsonEscolas = json_decode($jsonEscolas);
+              //debug_to_console($jsonEscolas);
+              if (empty($jsonEscolas)) {
+                  echo'<li class="list-group-item">'.'Você ainda não tem escolas cadastradas.'.'</li>';
+              }
 
-             <ul id="listEscolas" class="list list-group" >
-
-              <?php
-                  $jsonEscolas = json_decode($jsonEscolas);
-                  //debug_to_console($jsonEscolas);
-                  if(empty($jsonEscolas))
-                  {
-                      echo"<li class=\"list-group-item\">"."Você ainda não tem escolas cadastradas."."</li>";
-                  }
-
-                  foreach($jsonEscolas as $val)
-                  {
-
-                  echo"<li
-				  id=".$val->idEscola."
-				  nome=\"".utf8_decode($val->nome)."\"
-				  cidade=\"".utf8_decode($val->cidade)."\" class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\">
-				  <div class=\"escolaSearch row\">
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode ($val->nome)."</div>
-             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".utf8_decode ($val->cidade)."</div>
-					 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img src='imagens/editGray.png' alt=''></div>
-           		 </div>
-				</li>";
-                  }
-              ?>
-            </ul>
-
-
+              foreach ($jsonEscolas as $val) {
+                  echo'<li
+              				  id='.$val->idEscola.'
+              				  nome="'.utf8_decode($val->nome).'"
+              				  cidade="'.utf8_decode($val->cidade).'" class="list-group-item"  data-toggle="modal" data-target="#editModal" style="padding-top: 15px;padding-bottom: 15px;" >
+              				  <div class="escolaSearch row">
+                           		 <div class="col-xs-6 col-sm-6 col-md-6">'.utf8_decode($val->nome).'</div>
+                           		 <div class="col-xs-6 col-sm-6 col-md-6">'.utf8_decode($val->cidade)."</div>
+                         		 </div>
+              				</li>";
+              }
+          ?>
+        </ul>
       </div>
     </div>
-
-        </div>
+  </div>
   <div class="col-md-2"></div>
 </div>
 </div>
@@ -301,5 +283,5 @@
 </body>
 </html>
 <?php
-echo file_get_contents(dirname(__FILE__)."/Scripts/CadastrarScript.php", true);
+echo file_get_contents(dirname(__FILE__).'/Scripts/CadastrarScript.php', true);
 ?>

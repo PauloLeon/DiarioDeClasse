@@ -264,6 +264,26 @@ require_once('model/conexao.php');
 			}
 		}
 
+
+		public function insertConteudo($conteudo, $data, $fk_idUsuario, $fk_idDisciplina, $fk_idTurma)
+		{
+			try{
+				$mes = $this->getMesStringToNumber($mes);
+				$data = "". $ano ."-". $mes ."-". $dia ."";
+				debug_to_console($data.  " - Data de inserção ARQUIVO:User.php");
+				$sql = "INSERT INTO conteudo (conteudo, data, fk_idUsuario, fk_idDisciplina, fk_idTurma, ativo)".
+				"VALUES (\"".$conteudo."\"".", ".$data." , ".$fk_idUsuario." , ".$fk_idDisciplina." , ".$fk_idTurma." , ". "1);";
+				debug_to_console($sql. "- ARQUIVO:User.php");
+				$result=$this->connDataBase->insertBanco($sql,$this->connDataBase);
+				if($result==false)
+				{
+					debug_to_console($sql. "- ARQUIVO:User.php");
+				}
+			}catch(Exception $exc){
+				die($exc->getTraceAsString());
+			}
+		}
+
 		public function insertParecer($fk_idUsuario,$fk_idAluno,$parecer,$tipoParecer)
 		{
 			try{
@@ -637,7 +657,22 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 				$json = json_encode($result);
 				debug_to_console($json);
 				return $json;
+			}catch(Exception $exc){
+				die($exc->getTraceAsString());
+			}
+		}
 
+		public function getAllConteudo($fk_idUsuario,$fk_idDisciplina, $fk_idTurma)
+		{
+			try{
+		    $sql ="SELECT idConteudo, fk_idUsuario, fk_idDisciplina, conteudo, DATE_FORMAT(data,'%d-%m-%Y') as data, fk_idTurma
+				FROM conteudo WHERE fk_idUsuario=".$fk_idUsuario." AND fk_idDisciplina=".$fk_idDisciplina." AND fk_idTurma=".$fk_idTurma." AND ativo= 1;";
+				debug_to_console($sql);
+				$result=$this->connDataBase->queryArrayEscolas($sql);
+				debug_to_console($result[0]);
+				$json = json_encode($result);
+				debug_to_console($json);
+				return $json;
 			}catch(Exception $exc){
 				die($exc->getTraceAsString());
 			}
@@ -653,7 +688,6 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 				$json = json_encode($result);
 				debug_to_console($json);
 				return $json;
-
 			}catch(Exception $exc){
 				die($exc->getTraceAsString());
 			}
@@ -712,11 +746,6 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 				die($exc->getTraceAsString());
 			}
 		}
-/* POR FAZER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-		#update ocorrencia
-		#UPDATE Ocorrencia
-		#SET ativo=1,fk_idTurma=1, Data='2016-01-14', ocorrencia='chegou atrasado mais é o chefe'
-		#WHERE fk_idUsuario=1 AND fk_idAluno=1;
 
 		public function updateOcorrencia($fk_idUsuario,$fk_idAluno,$fk_idTurma,$dia,$mes,$ano,$ocorrencia,$idOcorrencia)
 		{
@@ -738,6 +767,26 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 			}
 		}
 
+
+		public function updateConteudo($fk_idUsuario,$idConteudo,$fk_idDisciplina,$fk_idTurma,$dia,$mes,$ano,$conteudo)
+		{
+			try{
+				$mes = $this->getMesStringToNumber($mes);
+				$data = "". $ano ."-". $mes ."-". $dia ."";
+				debug_to_console($data. "- ARQUIVO:User.php");
+				$sql ="UPDATE conteudo SET fk_idUsuario=". $fk_idUsuario.", conteudo="."\"".$conteudo."\"".", fk_idTurma=".$fk_idTurma.", fk_idDisciplina = ".$fk_idDisciplina.", data='".$data."', ativo=1
+				WHERE fk_idUsuario= ".$fk_idUsuario." AND idConteudo=".$idConteudo."  ;";
+				$result=$this->connDataBase->insertBanco($sql,$this->connDataBase);
+				if($result==false)
+				{
+					debug_to_console($sql. "- ARQUIVO:User.php");
+				}
+				echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=../CadastroTurma.php">';
+			}catch(Exception $exc){
+				die($exc->getTraceAsString());
+			}
+		}
+
 		public function updateParecer($fk_idUsuario,$fk_idAluno,$parecer,$idParecer,$tipoParecer)
 		{
 			try{
@@ -748,8 +797,6 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 				{
 					debug_to_console($sql. "- ARQUIVO:User.php");
 				}
-				//$this->insertTurmaDisciplina($nome,$fk_idUsuario,$arrayDisciplinas);
-				//echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=../CadastroTurma.php">';
 			}catch(Exception $exc){
 				die($exc->getTraceAsString());
 			}
@@ -874,7 +921,21 @@ public function getIdTurmaFromInsertAlunoBanco($fk_idTurma,$fk_idUsuario)
 			}catch(Exception $exc){
 				die($exc->getTraceAsString());
 			}
+		}
 
+		public function removeConteudo($idConteudo,$fk_idUsuario)
+		{
+			try{
+				$sql = "UPDATE conteudo SET ativo = 0 WHERE idConteudo= ".$idConteudo." and fk_idUsuario= ".$fk_idUsuario." ;";
+				$result=$this->connDataBase->insertBanco($sql,$this->connDataBase);
+				if($result==false)
+				{
+					debug_to_console($sql. "- ARQUIVO:User.php");
+				}
+				echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=../CadastrarAluno.php">';
+			}catch(Exception $exc){
+				die($exc->getTraceAsString());
+			}
 		}
 
 		public function removeParecer($idParecer,$fk_idUsuario)

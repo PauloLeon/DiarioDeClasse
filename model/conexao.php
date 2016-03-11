@@ -5,16 +5,17 @@ header('Content-Type: text/html; charset=utf-8');
 
 class conexao {
 
-   //***Comentario: Paulo Rosa*** Atualizado para o diario de classe
-    var $user = "root";
-	  var  $passwd = "";
-    //var $passwd = "root";
-    //var $host = "localhost:8889";
-	  var $host = "localhost";
-    var $database = "diariodeclasse";
-    var $query;
-    var $link;
-    var $result;
+  //***Comentario: Paulo Rosa*** Atualizado para o diario de classe
+   var $user = "root";
+   //var  $passwd = "";
+   //PARA FUNCIONAR NO MACOSX
+   var $passwd = "root";
+   var $host = "localhost:8889";
+   //var $host = "localhost";
+   var $database = "diariodeclasse";
+   var $query;
+   var $link;
+   var $result;
 
     function __construct() {
         $this->Conectar();

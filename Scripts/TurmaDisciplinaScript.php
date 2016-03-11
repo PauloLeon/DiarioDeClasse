@@ -1,8 +1,8 @@
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-switch.js"></script>
-<script src="../js/bootstrap-datepicker.js"></script>
-<script src="../js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script src="/js/bootstrap-datepicker.js"></script>
+<script src="/js/locales/bootstrap-datepicker.pt-BR.js"></script>
 <script src="js/bootstrap-switch.js"></script>
 <script src="js/list.js"></script>
 <script>
@@ -20,17 +20,18 @@ turmaDisciplina = replaceAll("'", "\"",turmaDisciplina);
 var turmaDisciplinaJSON = JSON.parse(turmaDisciplina);
 //Acessando o JSON
 
-console.log(turmaDisciplinaJSON[1]);
+//CONSOLES PARA DEBUG
+/*console.log(turmaDisciplinaJSON[1]);
 console.log("hiri --> "+turmaDisciplinaJSON.length);
 console.log(turmaDisciplinaJSON[1].idDisciplina);
 console.log(turmaDisciplinaJSON[1].nmDisciplina);
-//console.log($("#getAjaxDisciplinas li[id|='"+turmaDisciplinaJSON[1].idDisciplina+"").hide());
+console.log($("#getAjaxDisciplinas li[id|='"+turmaDisciplinaJSON[1].idDisciplina+"").hide());*/
 
 $("#getAjaxDisciplinas li").hide();
 
   //criando o calendario
   $(document).ready(function () {
-    $('#exemplo').datepicker({
+    $('#calendar').datepicker({
 		    todayBtn: "linked",
 		    format: "dd/mm/yyyy",
 		    language: "pt-BR",

@@ -1,6 +1,6 @@
 <?php
 	include 'php/session.php';
-	$varNome = "";
+	//$varNome = "";
 	$jsonDisciplinas = $userLogado->getDisciplinaJSON($userLogado->getId());
 
 	 if (!empty($_GET['formSubmit']))
@@ -43,7 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
+      <a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
 
@@ -63,21 +63,11 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class=" div_blue nav navbar-nav side-nav">
         <li> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a> </li>
-        <li>
-                  <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-                </li>
-                <li>
-                  <a href="Cadastrar.php">Instituição/Escola</a>
-                </li>
-                <li>
-                  <a href="CadastrarDisciplina.php">Disciplina</a>
-                </li>
-                <li>
-                  <a href="CadastroTurma.php">Turma</a>
-                </li>
-                <li>
-                  <a href="CadastrarAluno.php">Aluno</a>
-                </li>
+        <li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+				<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+		    <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+        <li><a href="CadastroTurma.php">Turmas</a></li>
+        <li><a href="CadastrarAluno.php">Alunos</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -88,7 +78,7 @@
       <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12" id="disciplina">
-         <h1 class="page-header">Cadastro  <small>de Disciplina</small> </h1>
+         <h3 class="page-header" style="margin-top: 20px;" >Cadastro de Disciplinas </h3>
   <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -131,8 +121,7 @@
 
               <div class="panel-heading">
                 <div class="row">
-		<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Disciplinas</h3></div>
-        <div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Editar</h3></div>
+		<div class="col-xs-12 col-sm-12 col-md-12"><h3 class="panel-title">Disciplinas</h3></div>
         </div>
               </div>
 
@@ -147,10 +136,9 @@
                         foreach($jsonDisciplinas as $val)
                         {
 
-							echo"<li class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\">
+							echo"<li class=\"list-group-item\"  data-toggle=\"modal\" data-target=\"#editModal\" style=\"padding-top: 15px;padding-bottom: 15px;\">
 				  <div class=\"disciplinaSearch row\">
-             		 <div class=\"col-xs-6 col-sm-6 col-md-6\">".utf8_decode($val->nome)."</div>
-					 <div class=\"col-xs-6 col-sm-6 col-md-6\"><img src='imagens/editGray.png' alt=''></div>
+             		 <div class=\"col-xs-12 col-sm-12 col-md-12\">".utf8_decode($val->nome)."</div>
            		 </div>
 				</li>";
                         }
@@ -180,7 +168,7 @@
       </div>
       <div class="modal-body">
            <div class="thumbnail" style=" background-color: ghostwhite;" >
-              <form role="form" action="CadastrarDisciplina.php" method="get">
+              <form role="form" action="CadastrarDisciplina.php"  method="get">
                 <div class="form-group">
                   <label class="control-label" for="exampleInputEmail1">Nome da Disciplina &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     &nbsp; &nbsp; <br>

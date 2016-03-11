@@ -35,6 +35,9 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 		max-height: 520px;
 		overflow-x: hidden;
 	}
+	.border-edit-green{
+		border: 2px solid #51B867;
+	}
 	</style>
 </head>
 
@@ -49,13 +52,13 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+				<a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
 			</div>
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
@@ -85,16 +88,16 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
 					</li>
 					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
+						<a href="Cadastrar.php">Instituições de Ensino</a>
 					</li>
 					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
+						<a href="CadastrarDisciplina.php">Disciplinas</a>
 					</li>
 					<li>
-						<a href="CadastroTurma.php">Turma</a>
+						<a href="CadastroTurma.php">Turmas</a>
 					</li>
 					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
+						<a href="CadastrarAluno.php">Alunos</a>
 					</li>
 				</ul>
 			</div>
@@ -155,7 +158,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 										<div class="row">
 											<div class="col-md-2"></div>
 											<div class="col-md-8">
-												<!--<img src="imagens/turmas.png" alt="..." class="img-thumbnail">-->
+												<!--<img src="../DiarioDeClasse/imagens/turmas.png" alt="..." class="img-thumbnail">-->
 											</div>
 											<div class="col-md-2"></div>
 										</div>

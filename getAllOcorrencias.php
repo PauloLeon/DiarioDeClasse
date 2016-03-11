@@ -26,9 +26,8 @@ foreach($jsonOcorrencias as $val)
 				 data-toggle=\"modal\"
 				 data-target=\"#editModal\" >
 				 <div class=\"row\">
-				  <div class=\"col-xs-4 col-sm-4 col-md-4\">".substr($val->ocorrencia, 0, 25)."...</div>
-	             		 <div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->data."</div>
-									 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img id='".$val->idOcorrencia."GRAY' src='imagens/editGray.png' alt=''> <img id='".$val->idOcorrencia."GREEN' src='imagens/editGreen.png' style='display: none;'' alt=''></div>
+				  <div class=\"col-xs-6 col-sm-6 col-md-6\">".substr($val->ocorrencia, 0, 25)."...</div>
+	             		 <div class=\"col-xs-6 col-sm-6 col-md-6\">".$val->data."</div>
 
 					</div>
 		     </li>";
@@ -40,10 +39,8 @@ foreach($jsonOcorrencias as $val)
 				 data-toggle=\"modal\"
 				 data-target=\"#editModal\" >
 				 <div class=\"row\">
-					<div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->ocorrencia."</div>
-									 <div class=\"col-xs-4 col-sm-4 col-md-4\">".$val->data."</div>
-									 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img id='".$val->idOcorrencia."GRAY' src='imagens/editGray.png' alt=''> <img id='".$val->idOcorrencia."GREEN' src='imagens/editGreen.png' style='display: none;'' alt=''></div>
-
+				  <div class=\"col-xs-6 col-sm-6 col-md-6\">".substr($val->ocorrencia, 0, 25)."...</div>
+	             		 <div class=\"col-xs-6 col-sm-6 col-md-6\">".$val->data."</div>
 					</div>
 				 </li>";
 	}
@@ -51,4 +48,7 @@ foreach($jsonOcorrencias as $val)
 
 
 }
+
+//									 <div class=\"col-xs-4 col-sm-4 col-md-4\"><img id='".$val->idOcorrencia."GRAY' src='imagens/editGray.png' alt=''> <img id='".$val->idOcorrencia."GREEN' src='imagens/editGreen.png' style='display: none;'' alt=''></div>
+
 ?>

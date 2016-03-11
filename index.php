@@ -25,8 +25,8 @@
 <!-- WARNING: Respond.js doesn't work if you view the page via file://
     -->
 <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="../DiarioDeClasse/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -37,12 +37,11 @@
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header" >
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    <a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
+    <a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a> </div>
   <!-- Top Menu Items -->
   <ul class="nav navbar-right top-nav ">
     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-      <?php
-										echo $userLogado->getNome();?>
+      <?php echo $userLogado->getNome();?>
       <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li> <a href="#"style="color: #428bca;" ><i class="fa fa-fw fa-user"></i> Perfil</a> </li>
@@ -59,19 +58,19 @@
     <ul class="div_blue nav navbar-nav side-nav "  >
       <li class="active"> <a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard </a> </li>
       <li> <a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a> </li>
-      <li> <a href="Cadastrar.php">Instituição/Escola</a> </li>
-      <li> <a href="CadastrarDisciplina.php">Disciplina</a> </li>
-      <li> <a href="CadastroTurma.php">Turma</a> </li>
-      <li> <a href="CadastrarAluno.php">Aluno</a> </li>
+			<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+			<li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+			<li><a href="CadastroTurma.php">Turmas</a></li>
+			<li><a href="CadastrarAluno.php">Alunos</a></li>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
 </nav>
-<script src="js/jquery-1.11.0.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/morris/raphael.min.js"></script>
-<script src="js/plugins/morris/morris.min.js"></script>
-<script src="js/plugins/morris/morris-data.js"></script>
+<script src="../DiarioDeClasse/js/jquery-1.11.0.js"></script>
+<script src="../DiarioDeClasse/js/bootstrap.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/raphael.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/morris.min.js"></script>
+<script src="../DiarioDeClasse/js/plugins/morris/morris-data.js"></script>
 <div id="begin" style="min-height: 100vh; width: 100%; background-color: white;">
   <div class="container-fluid">
     <!-- Page Heading -->
@@ -104,68 +103,71 @@
     </div>
     <div class="row">
 			<div class="col-lg-4 col-md-4">
+				<a href="TurmaDisciplina.php">
         <div class="panel panel-primary">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/frequencia_paulo.png"
+
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/frequencia_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Frequencias</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Frequencias</div>
               </div>
             </div>
           </div>
-          <a href="TurmaDisciplina.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-          </a> </div>
+        </div>
+				</a>
       </div>
       <div class="col-lg-4 col-md-4">
+				<a href="RegistroDeConteudo.php">
         <div class="panel panel-gray">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/conteudo_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conteudo_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Conteúdo</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Conteúdo</div>
               </div>
             </div>
           </div>
-          <a href="RegistroDeConteudo.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-				<!--</a>--> </div>
+				</div>
+				</a>
       </div>
 			<div class="col-lg-4 col-md-4">
+				<a href="Ocorrencias.php">
         <div class="panel panel-red">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/ocorrencias_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/ocorrencias_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Ocorrências</div>
+                <!--<div class="huge">1</div>-->
+                <div style="margin-top: 50px;">Ocorrências</div>
               </div>
             </div>
           </div>
-          <a href="Ocorrencias.php">
           <div class="panel-footer"> <span class="pull-left">Ver Detalhes</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
             <div class="clearfix"></div>
           </div>
-          </a> </div>
+          </div>
+				</a>
       </div>
 			<div class="col-lg-4 col-md-4">
         <div class="panel panel-default panel-green" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/nota_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/nota_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">12</div>
-                <div>Notas</div>
+                <div style="margin-top: 50px;">Notas</div>
               </div>
             </div>
           </div>
@@ -179,11 +181,10 @@
         <div class="panel panel-yellow" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/conceito_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/conceito_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Conceitos</div>
+                <div style="margin-top: 50px;">Conceitos</div>
               </div>
             </div>
           </div>
@@ -197,11 +198,10 @@
         <div id="parecer" class="panel panel-purple" style="opacity: 0.5;">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-3"> <img class="media-object" src="/imagem/site/icon/parecer_paulo.png"
+              <div class="col-xs-3"> <img class="media-object" src="../DiarioDeClasse/imagem/site/icon/parecer_paulo.png"
                       alt=""> </div>
               <div class="col-xs-9 text-right">
-                <div class="huge">1</div>
-                <div>Parecer</div>
+                <div style="margin-top: 50px;">Parecer</div>
               </div>
             </div>
           </div>
@@ -223,11 +223,3 @@
 <!-- Morris Charts JavaScript -->
 </body>
 </html>
-<script>
-$("#begin div[id|='parecer'").children().attr('disabled',true);//desabilitando os modulos não finalizados
-var nodes = document.getElementById("parecer").getElementsByTagName('*');
-for(var i = 0; i < nodes.length; i++)
-{
-     nodes[i].disabled = true;
-}
-</script>

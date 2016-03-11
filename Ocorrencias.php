@@ -27,13 +27,16 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 	<style>
 	.scrollable-menu {
 		height: auto;
-		max-height: 275px;
+		max-height: 235px;
 		overflow-x: hidden;
 	}
 	.scrollable-menu-xl {
 		height: auto;
-		max-height: 520px;
+		max-height: 470px;
 		overflow-x: hidden;
+	}
+	.border-edit-green{
+		border: 2px solid #51B867;
 	}
 	</style>
 </head>
@@ -49,13 +52,13 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
+				<a class="navbar-brand" href="index.php"><img src="../DiarioDeClasse/imagem/site/diario-de-classe.png" class="img-responsive"style="width:150px;"></a>
 			</div>
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<ul class="nav navbar-right top-nav">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Eduardo Saraiva <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo $userLogado->getNome();?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#" style="color: #428bca;"><i class="fa fa-fw fa-user"></i> Perfil</a>
@@ -78,24 +81,12 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 			menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="div_blue nav navbar-nav side-nav">
-					<li>
-						<a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a>
-					</li>
-					<li>
-						<a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a>
-					</li>
-					<li>
-						<a href="Cadastrar.php">Instituição/Escola</a>
-					</li>
-					<li>
-						<a href="CadastrarDisciplina.php">Disciplina</a>
-					</li>
-					<li>
-						<a href="CadastroTurma.php">Turma</a>
-					</li>
-					<li>
-						<a href="CadastrarAluno.php">Aluno</a>
-					</li>
+					<li><a href="index.php"><i class="fa fa-fw fa-desktop"></i> Dashboard</a></li>
+					<li><a href="">Cadastros<i class="fa fa-fw fa-caret-down"></i></a></li>
+					<li><a href="Cadastrar.php">Instituições de Ensino</a></li>
+	        <li><a href="CadastrarDisciplina.php">Disciplinas</a></li>
+	        <li><a href="CadastroTurma.php">Turmas</a></li>
+	        <li><a href="CadastrarAluno.php">Alunos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -106,17 +97,17 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 				<div class="row">
 					<div class="col-lg-6">
-						<h2 class="page-header">Ocorrências</h2	>
+						<h2 class="page-header"  style="margin-top: 20px;">Ocorrências</h2	>
 						</div>
 						<div class="col-lg-6 pull-right" style="float:right;">
 							<div class="form-group" style="margin-bottom: 0px; margin-top: 10px;">
 								<!--<div id="exemplo"></div>-->
 									<div class="form-group">
 										<div class="row">
-											<div class="col-md-offset-8  col-md-4">
-												<div class="dropdown ">
+											<div class="col-md-7  col-md-4">
+												<div class="dropdown "  style="margin-top: 13px;">
 													<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> Escolha uma Turma: <span class="caret"></span> </button>
-													<ul id="escolhaTurma" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+													<ul id="escolhaTurma" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 														<?php
 														$jsonTurmas = json_decode($jsonTurmas);
 														if(empty($jsonTurmas))
@@ -130,7 +121,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 														}
 														?>
 													</ul>
-												</div>&nbsp;
+												</div>
 									</div>
 								</div>
 							</div>
@@ -144,18 +135,18 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 						<div class="panel panel-red" >
 							<div class="panel-heading">
 								<div class="row">
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Alunos</h3></div>
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Turma</h3></div>
-									<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h4></div>
+									<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Alunos</h3></div>
+									<div class="col-xs-6 col-sm-6 col-md-6"><h3 class="panel-title">Turma</h3></div>
+									<!--<div class="col-xs-4 col-sm-4 col-md-4"><h3 class="panel-title">Editar</h4></div>-->
 								</div>
 							</div>
-							<div class="panel-body" style="height:550px;">
+							<div class="panel-body" style="height:500px;">
 								<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(230,143,141,0.3); height:520px;">
 									<ul id="editAlunos" class="list-group" >
 										<div class="row">
 											<div class="col-md-2"></div>
 											<div class="col-md-8">
-												<!--<img src="imagens/turmas.png" alt="..." class="img-thumbnail">-->
+												<!--<img src="../DiarioDeClasse/imagens/turmas.png" alt="..." class="img-thumbnail">-->
 											</div>
 											<div class="col-md-2"></div>
 										</div>
@@ -167,22 +158,27 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 					<div id="historico" class="col-lg-6">
 							<div class="panel panel-red" >
-								<div class="panel-heading">
-									<h3 class="panel-title">Histórico</h3>
+								<div class="panel-heading" style="height: 35px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;">
+									<div class="col-md-6">
+										<h3 class="panel-title" style="padding-top: 6px;">Histórico</h3>
+									</div>
+									<div class="col-md-6"style="padding-right: 0px;">
+										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN-red.png" class="img-responsive pull-right"> </img>
+									</div>
 								</div>
-								<div class="panel-body" style="height:300px;">
-									<div class="thumbnail scrollable-menu" role="menu" style="background-color: rgba(230,143,141,0.3); height:275px;">
+								<div class="panel-body" style="height:500px;">
+									<div class="thumbnail scrollable-menu-xl" role="menu" style="background-color: rgba(230,143,141,0.3); height:520px;">
 									<ul id="editOcorrencias" class="list-group" >
 									</ul>
 								</div>
 								</div>
 						</div>
-						<div class="form-group">
+						<!--<div class="form-group">
 							<div class="panel panel-red" >
 								<div class="panel-heading">
 									<h3 class="panel-title">Ocorrências</h3>
 								</div>
-								<div class="panel-body" style="height:190px;">
+								<div class="panel-body" style="height:170px;">
 							<div id="exemplo" class="input-group date" data-provide="datepicker">
 								<input id="calendar" type="text"  value="" class="form-control">
 								<div class="input-group-addon">
@@ -199,7 +195,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 
 						</div>
 
-					</div>
+					</div>-->
 				</div>
 			</form>
 			<!-- /.row -->
