@@ -1,6 +1,6 @@
 <?php
 	include 'php/session.php';
-	$varNome = "";
+	//$varNome = "";
 	$jsonDisciplinas = $userLogado->getDisciplinaJSON($userLogado->getId());
 
 	 if (!empty($_GET['formSubmit']))
@@ -168,7 +168,7 @@
       </div>
       <div class="modal-body">
            <div class="thumbnail" style=" background-color: ghostwhite;" >
-              <form role="form" action="CadastrarDisciplina.php" method="get">
+              <form role="form" action="CadastrarDisciplina.php"  method="get">
                 <div class="form-group">
                   <label class="control-label" for="exampleInputEmail1">Nome da Disciplina &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     &nbsp; &nbsp; <br>
