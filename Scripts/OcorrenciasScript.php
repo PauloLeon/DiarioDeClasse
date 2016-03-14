@@ -12,7 +12,9 @@ var dia;
 var mes;
 var ano;
 var isEdicao = false; //flag para identificar se está edição
-$("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de excluir toda vez que inicia a pagina
+$("#incluirModal button[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de excluir toda vez que inicia a pagina
+$("#incluirModal button[id|='save_btn'").attr("disabled",true);//desabilitando o botão de salvar toda vez que inicia a pagina
+
 
 /*
   //criando o calendario
@@ -49,7 +51,8 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
   //click do aluno para exibir o historico
   function clickAluno(id)
   {
-    $("#begin a[id|='delete_btn'").attr("disabled",true);
+    $("#incluirModal button[id|='delete_btn'").attr("disabled",true);
+    $("#incluirModal button[id|='save_btn'").attr("disabled",true);
     if (aluno_antigo != undefined) {
       $("#editAlunos li[id="+aluno_antigo+"]").removeClass("border-edit-green");
     }
@@ -64,7 +67,8 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
   function clickOcorrenciaEdit(idAluno, idOcorrencia, ocorrencia,data)
   {
     isEdicao = true;
-    $("#begin a[id|='delete_btn'").attr("disabled",false);
+    $("#incluirModal button[id|='delete_btn'").attr("disabled",false);
+    $("#incluirModal button[id|='save_btn'").attr("disabled",false);
     aluno_atual = idAluno;
     if (ocorrencia_antiga != undefined) {
       $("#historico li[id="+ocorrencia_antiga+"]").removeClass("border-edit-green");
@@ -72,9 +76,9 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
     ocorrencia_atual = idOcorrencia;
     $("#historico li[id="+ocorrencia_atual+"]").addClass("border-edit-green");
     ocorrencia_antiga = idOcorrencia;
-    $("#begin input[id|='textOcorrencia']").val(ocorrencia);
+    $("#incluirModal input[id|='textOcorrencia']").val(ocorrencia);
     data = data.replace(/-/g, "/");
-    $("#begin input[id|='calendar']").val(data);
+    $("#incluirModal input[id|='calendar']").val(data);
 
   }
 
@@ -127,13 +131,13 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
   }
 
   //lançamento de ocorrencia ou edição
-  $("#begin a[id|='save_btn'").click(function()
+  $("#incluirModal button[id|='save_btn'").click(function()
   {
     console.log(isEdicao);
     var isDelete = false;
     if(isEdicao==true){
       //para data
-      var stringDate = $("#begin input[id|='calendar']").val();
+      var stringDate = $("#incluirModal input[id|='calendar']").val();
       console.log(stringDate);
       var stringDateArray = stringDate.split("/");
       console.log(stringDateArray[0]); //dia
@@ -143,7 +147,7 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
       dia = stringDateArray[0];
       ano = stringDateArray[2];
       //para ocorrencia
-      var ocorrencia = $("#begin input[id|='textOcorrencia']").val();
+      var ocorrencia = $("#incluirModal input[id|='textOcorrencia']").val();
     	$.ajax({
     			  url: 'action_ocorrencia.php',
     			  type: "POST",
@@ -160,8 +164,8 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
     						console.log(data); //debug
                 buscaOcorrencia(aluno_atual);//refresh no historico
                 isEdicao= false; //saindo da edição
-                $("#begin input[id|='textOcorrencia']").val(""); //limpando
-                $("#begin input[id|='calendar']").val(""); //limpando
+                $("#incluirModal input[id|='textOcorrencia']").val(""); //limpando
+                $("#incluirModal input[id|='calendar']").val(""); //limpando
     				}
     	}); // End Ajax
     }else{
@@ -175,7 +179,7 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
       mes = stringDateArray[1];
       ano = stringDateArray[3];
       //para ocorrencia
-      var ocorrencia = $("#begin input[id|='textOcorrencia']").val();
+      var ocorrencia = $("#incluirModal input[id|='textOcorrencia']").val();
       $.ajax({
             url: 'action_ocorrencia.php',
             type: "POST",
@@ -190,8 +194,10 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
             success: function(data){
                 console.log(data);
                 buscaOcorrencia(aluno_atual);
-                $("#begin input[id|='textOcorrencia']").val(""); //limpando
-                $("#begin input[id|='calendar']").val(""); //limpando
+                $("#incluirModal input[id|='textOcorrencia']").val(""); //limpando
+                $("#incluirModal input[id|='calendar']").val(""); //limpando
+                $("#incluirModal button[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de novo
+                $("#incluirModal button[id|='save_btn'").attr("disabled",true);//desabilitando o botão de novo
             }
       }); // End Ajax
     }
@@ -200,12 +206,12 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
 
 
   //excluir ocorrencia ou edição
-  $("#begin a[id|='delete_btn'").click(function()
+  $("#incluirModal button[id|='delete_btn'").click(function()
   {
     var isDelete = true;
     if(isEdicao==true){
       //para data
-      var stringDate = $("#begin input[id|='calendar']").val();
+      var stringDate = $("#incluirModal input[id|='calendar']").val();
       console.log(stringDate);
       var stringDateArray = stringDate.split("/");
       console.log(stringDateArray[0]); //dia
@@ -232,9 +238,11 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
     						console.log(data); //debug
                 buscaOcorrencia(aluno_atual);//refresh no historico
                 isEdicao= false; //saindo da edição
-                $("#begin input[id|='textOcorrencia']").val(""); //limpando
-                $("#begin input[id|='calendar']").val(""); //limpando
-                $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de novo
+                $("#incluirModal input[id|='textOcorrencia']").val(""); //limpando
+                $("#incluirModal input[id|='calendar']").val(""); //limpando
+                $("#incluirModal button[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de novo
+                $("#incluirModal button[id|='save_btn'").attr("disabled",true);//desabilitando o botão de novo
+
     				}
     	}); // End Ajax
     }

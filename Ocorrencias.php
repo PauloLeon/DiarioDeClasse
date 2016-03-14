@@ -202,7 +202,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 				<button id="delete_btn" class="btn btn-danger" style="color: #fff;"  type="button" data-dismiss="modal">Excluir</button>
-				<button id="save_btn" <a id="save_btn" class="btn btn-danger" style="color: #fff;" type="submit" name="formSubmit" value="submit_insert">Salvar</button>
+				<button id="save_btn" id="save_btn" class="btn btn-danger" style="color: #fff;" type="submit" name="formSubmit" value="submit_insert" data-dismiss="modal">Salvar</button>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
