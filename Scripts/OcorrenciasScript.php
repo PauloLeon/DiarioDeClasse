@@ -1,7 +1,7 @@
-<script type="text/javascript" src="js/jquery-min.js"></script>
+<script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="../js/bootstrap-datepicker.js"></script>
-<script src="../js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
 <script>
 var aluno_atual;
 var aluno_antigo; //variavel para trocar cores do icone edit
@@ -14,7 +14,7 @@ var ano;
 var isEdicao = false; //flag para identificar se está edição
 $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de excluir toda vez que inicia a pagina
 
-
+/*
   //criando o calendario
   $(document).ready(function () {
     $('#exemplo').datepicker({
@@ -26,6 +26,7 @@ $("#begin a[id|='delete_btn'").attr("disabled",true);//desabilitando o botão de
         todayHighlight: true
 	  });
   });
+  */
 
   //drop de escolha de alunos
   $("#escolhaTurma li").click(function() {
