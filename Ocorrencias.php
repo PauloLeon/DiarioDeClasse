@@ -128,8 +128,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 					</div>
 				</div>
 			</div>
-
-			<form role="form">
+			<!--<form role="form">-->
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="panel panel-red" >
@@ -155,7 +154,6 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 						</div>
 					</div>
 					</div>
-
 					<div id="historico" class="col-lg-6">
 							<div class="panel panel-red" >
 								<div class="panel-heading" style="height: 35px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;">
@@ -163,7 +161,7 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 										<h3 class="panel-title" style="padding-top: 6px;">Histórico</h3>
 									</div>
 									<div class="col-md-6"style="padding-right: 0px;">
-										<img src="../DiarioDeClasse/imagens/testeIMG/addBTN-red.png" class="img-responsive pull-right"> </img>
+										<input class="img-responsive pull-right" type="image" src="../DiarioDeClasse/imagens/testeIMG/addBTN-red.png" data-toggle="modal" data-target="#incluirModal" />
 									</div>
 								</div>
 								<div class="panel-body" style="height:500px;">
@@ -173,37 +171,42 @@ $jsonEscolas = $userLogado->getEscolasJSON($userLogado->getId());
 								</div>
 								</div>
 						</div>
-						<!--<div class="form-group">
-							<div class="panel panel-red" >
-								<div class="panel-heading">
-									<h3 class="panel-title">Ocorrências</h3>
-								</div>
-								<div class="panel-body" style="height:170px;">
-							<div id="exemplo" class="input-group date" data-provide="datepicker">
-								<input id="calendar" type="text"  value="" class="form-control">
-								<div class="input-group-addon">
-									<span class="glyphicon glyphicon-th"></span>
-								</div>
-							</div>
-							<label for="name"></label>
-							<input id="textOcorrencia" value="" class="form-control" rows="10"></input>
-							<div class="row" style="margin-top: 10px;">
-								<div class="col-xs-2 col-sm-2 col-md-2"><h3 class="panel-title"><a id="save_btn" <a id="save_btn" class="btn btn-danger" style="color: #fff;">Salvar</a> </h3></div>
-								<div class="col-xs-10 col-sm-10 col-md-10"><h3 class="panel-title"><a id="delete_btn" class="btn btn-danger" style="color: #fff;" >Excluir</a></h3></div>
-							</div>
-						</div>
-
-						</div>
-
-					</div>-->
 				</div>
-			</form>
+			<!--</form>-->
 			<!-- /.row -->
 			<!-- /#page-wrapper -->
 		</div>
 		<!-- /#wrapper -->
 	</div>
 </div>
+<!--MODAL INCLUIR-->
+	<div class="modal" id="incluirModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Ocorrências</h4>
+			</div>
+			<div class="modal-body">
+					 <div class="form-group">
+						 <div id="exemplo" class="input-group date" data-provide="datepicker">
+							 <input id="calendar" type="text"  value="" class="form-control">
+							 <div class="input-group-addon">
+								 <span class="glyphicon glyphicon-th"></span>
+							 </div>
+						 </div>
+						 <label for="name"></label>
+						 <input id="textOcorrencia" value="" class="form-control" rows="10"></input>
+				  </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button id="delete_btn" class="btn btn-danger" style="color: #fff;"  type="button" data-dismiss="modal">Excluir</button>
+				<button id="save_btn" id="save_btn" class="btn btn-danger" style="color: #fff;" type="submit" name="formSubmit" value="submit_insert" data-dismiss="modal">Salvar</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>
 

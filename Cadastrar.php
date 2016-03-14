@@ -127,8 +127,8 @@
 
 		<h3 class="panel-title visible-sm visible-xs"><div class="form-group visible-xs">
 		          <button class="btn btn-success" data-toggle="modal" data-target="#incluirModal" name="incluir" onClick="incluirOnClick()" value="submit_insert"><span class="glyphicon glyphicon-plus"></span> Nova Instituição</button>
-		        </div></h3>
-
+		        </div>
+    </h3>
         <h3 class="panel-title visible-sm visible-xs"> <div class="form-group visible-xs">
             <div class="input-group">
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
@@ -200,9 +200,6 @@
           <input class="form-control" id="exampleInputEmail1" placeholder="Cidade da Escola"
                type="text" name="inputCidade"	value="<?=$varCidade;?>">
         </div>
-
-
-
       </div>
       </div>
       <div class="modal-footer">
